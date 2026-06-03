@@ -13,8 +13,26 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Ranukita — Landing Factory",
-  description: "Landing pages profesionales, rápidas y optimizadas para conversión.",
+  title: "Ranuk IT — ADA & WCAG Accessibility Audits",
+  description:
+    "Get a comprehensive WCAG 2.1 accessibility audit. Identify compliance gaps, avoid lawsuits, and make your site accessible to everyone. Free audit available.",
+  keywords: [
+    "ADA compliance",
+    "WCAG audit",
+    "accessibility testing",
+    "ADA lawsuit prevention",
+    "web accessibility",
+    "WCAG 2.1",
+    "Section 508",
+    "ADA remediation",
+  ],
+  openGraph: {
+    title: "Ranuk IT — ADA & WCAG Accessibility Audits",
+    description:
+      "Comprehensive WCAG 2.1 audits that protect your business from ADA lawsuits. Free audit — fix for a flat $1,200.",
+    url: "https://ranuk.dev",
+    siteName: "Ranuk IT Solutions",
+  },
 };
 
 export default function RootLayout({

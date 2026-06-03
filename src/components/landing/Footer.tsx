@@ -20,14 +20,14 @@ export default function Footer({ companyName, links, social }: FooterProps) {
   return (
     <footer className="border-t border-slate-200 bg-white">
       <div className="mx-auto max-w-7xl px-6 py-12 lg:px-8 lg:py-16">
-        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
           {/* Brand column */}
           <div className="sm:col-span-2 lg:col-span-1">
             <Link href="/" className="text-xl font-bold text-slate-900">
               {companyName}
             </Link>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-slate-600">
-              Building amazing products for the modern web.
+              Professional accessibility audits and software engineering. Protecting businesses from ADA risk since 2024.
             </p>
           </div>
 
