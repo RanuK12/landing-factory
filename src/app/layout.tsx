@@ -13,9 +13,24 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "LandingFactory — Landings profesionaless en 24h",
+  title: "Landing Factory — Landings Profesionales en 24h | Ranuk IT Solutions",
   description:
-    "Elegí tu nicho, completá tus datos y recibí tu landing profesional con Next.js + Tailwind. Sin mensualidades, código real.",
+    "Landings profesionales para tu negocio: restaurantes, startups, e-commerce, portfolios. Código real (Next.js + Tailwind), hosting incluido, sin mensualidades. Ranuk IT Solutions.",
+  keywords: [
+    "landing page",
+    "página web profesional",
+    "diseño web",
+    "Next.js",
+    "Ranuk IT",
+    "desarrollo web",
+    "hosting incluido",
+  ],
+  openGraph: {
+    title: "Landing Factory — Landings Profesionales en 24h",
+    description: "Landings profesionales con código real. Hosting incluido. Sin mensualidades.",
+    siteName: "Landing Factory | Ranuk IT Solutions",
+    type: "website",
+  },
 };
 
 export default function RootLayout({

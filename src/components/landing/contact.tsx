@@ -7,38 +7,50 @@ import { Textarea } from "@/components/ui/textarea";
 import { Send, Mail, MessageCircle } from "lucide-react";
 
 export function Contact() {
-  const { colors, businessName } = useTheme();
+  const { businessName } = useTheme();
 
   return (
-    <section id="contacto" className="py-24" style={{ backgroundColor: colors.background }}>
+    <section id="contacto" className="py-24">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-3xl font-bold tracking-tight" style={{ color: colors.foreground }}>
+          <h2 className="text-3xl font-bold tracking-tight text-white">
             ¿Listo para tu landing?
           </h2>
-          <p className="mt-4 text-lg" style={{ color: colors.foreground, opacity: 0.7 }}>
+          <p className="mt-4 text-lg text-white/40">
             Completá el formulario y en 24h tenés tu sitio web profesional.
           </p>
         </div>
 
-        <div className="mt-16 mx-auto max-w-lg">
+        <div className="mx-auto mt-16 max-w-lg">
           <form className="space-y-4">
             <div className="grid gap-4 sm:grid-cols-2">
-              <Input placeholder="Nombre" className="border" style={{ borderColor: colors.border }} />
-              <Input placeholder="Teléfono" type="tel" className="border" style={{ borderColor: colors.border }} />
+              <Input
+                placeholder="Nombre"
+                className="border-white/10 bg-white/[0.03] text-white placeholder:text-white/30"
+              />
+              <Input
+                placeholder="Teléfono"
+                type="tel"
+                className="border-white/10 bg-white/[0.03] text-white placeholder:text-white/30"
+              />
             </div>
-            <Input placeholder="Email" type="email" className="border" style={{ borderColor: colors.border }} />
-            <Input placeholder="Nombre de tu negocio" className="border" style={{ borderColor: colors.border }} />
+            <Input
+              placeholder="Email"
+              type="email"
+              className="border-white/10 bg-white/[0.03] text-white placeholder:text-white/30"
+            />
+            <Input
+              placeholder="Nombre de tu negocio"
+              className="border-white/10 bg-white/[0.03] text-white placeholder:text-white/30"
+            />
             <Textarea
               placeholder="Contame un poco sobre tu proyecto..."
-              className="min-h-[120px] border"
-              style={{ borderColor: colors.border }}
+              className="min-h-[120px] border-white/10 bg-white/[0.03] text-white placeholder:text-white/30"
             />
             <Button
               type="submit"
-              className="w-full"
+              className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white hover:from-cyan-400 hover:to-blue-500"
               size="lg"
-              style={{ backgroundColor: colors.primary, color: "white" }}
             >
               <Send className="mr-2 h-4 w-4" />
               Enviar y recibir presupuesto
@@ -47,17 +59,17 @@ export function Contact() {
 
           <div className="mt-8 flex items-center justify-center gap-6">
             <a
-              href="#"
-              className="flex items-center gap-2 text-sm font-medium transition-opacity hover:opacity-80"
-              style={{ color: colors.primary }}
+              href="mailto:emilio@ranuk.dev"
+              className="flex items-center gap-2 text-sm font-medium text-cyan-400/70 transition-colors hover:text-cyan-400"
             >
               <Mail className="h-4 w-4" />
-              hola@{businessName.toLowerCase().replace(/\s+/g, "")}.com
+              emilio@ranuk.dev
             </a>
             <a
-              href="#"
-              className="flex items-center gap-2 text-sm font-medium transition-opacity hover:opacity-80"
-              style={{ color: colors.primary }}
+              href="https://wa.me/393445721753"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 text-sm font-medium text-cyan-400/70 transition-colors hover:text-cyan-400"
             >
               <MessageCircle className="h-4 w-4" />
               WhatsApp

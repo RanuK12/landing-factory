@@ -30,7 +30,7 @@ export function LandingPage({
       businessName={businessName}
       tagline={tagline}
     >
-      <div className="min-h-screen">
+      <div className="min-h-screen bg-[#0a0a0f] text-white">
         <Header />
         <main>
           <Hero />

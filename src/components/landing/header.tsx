@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+/* img tags used instead of next/image for GitHub Pages basePath */
 import { useTheme } from "./theme-provider";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
@@ -12,20 +13,24 @@ export function Header() {
 
   return (
     <header
-      className="sticky top-0 z-50 w-full border-b backdrop-blur-md"
-      style={{ borderColor: colors.border, backgroundColor: "rgba(255,255,255,0.9)" }}
+      className="sticky top-0 z-50 w-full border-b backdrop-blur-xl"
+      style={{ borderColor: colors.border, backgroundColor: "rgba(10,10,15,0.85)" }}
     >
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6">
-        <Link href="/" className="flex items-center gap-2">
-          <div
-            className="flex h-8 w-8 items-center justify-center rounded-lg text-sm font-bold text-white"
-            style={{ backgroundColor: colors.primary }}
-          >
-            {businessName.charAt(0)}
+        <Link href="/" className="flex items-center gap-2.5">
+          <img
+            src="/landing-factory/ranuk-icon.png"
+            alt="Ranuk IT"
+            width={28}
+            height={28}
+            className="rounded-md"
+          />
+          <div className="flex flex-col leading-none">
+            <span className="text-sm font-bold text-white">{businessName}</span>
+            <span className="text-[9px] uppercase tracking-widest text-white/30">
+              by Ranuk IT
+            </span>
           </div>
-          <span className="text-lg font-semibold" style={{ color: colors.foreground }}>
-            {businessName}
-          </span>
         </Link>
 
         <nav className="hidden items-center gap-6 md:flex">
@@ -33,8 +38,7 @@ export function Header() {
             <Link
               key={item}
               href={`#${item.toLowerCase()}`}
-              className="text-sm font-medium transition-colors hover:text-foreground"
-              style={{ color: colors.foreground, opacity: 0.7 }}
+              className="text-sm font-medium text-white/50 transition-colors hover:text-white"
             >
               {item}
             </Link>
@@ -48,7 +52,7 @@ export function Header() {
           </Button>
         </nav>
 
-        <button className="md:hidden" onClick={() => setOpen(!open)}>
+        <button className="text-white md:hidden" onClick={() => setOpen(!open)}>
           {open ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
         </button>
       </div>
@@ -60,8 +64,7 @@ export function Header() {
               <Link
                 key={item}
                 href={`#${item.toLowerCase()}`}
-                className="py-2 text-sm font-medium"
-                style={{ color: colors.foreground }}
+                className="py-2 text-sm font-medium text-white/70"
                 onClick={() => setOpen(false)}
               >
                 {item}

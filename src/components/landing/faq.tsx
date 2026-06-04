@@ -1,6 +1,5 @@
 "use client";
 
-import { useTheme } from "./theme-provider";
 import { useState } from "react";
 import { ChevronDown } from "lucide-react";
 
@@ -32,17 +31,16 @@ const faqs = [
 ];
 
 export function FAQ() {
-  const { colors } = useTheme();
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <section id="faq" className="py-24" style={{ backgroundColor: "white" }}>
+    <section id="faq" className="border-y border-white/[0.04] bg-white/[0.01] py-24">
       <div className="mx-auto max-w-3xl px-4 sm:px-6">
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-3xl font-bold tracking-tight" style={{ color: colors.foreground }}>
+          <h2 className="text-3xl font-bold tracking-tight text-white">
             Preguntas frecuentes
           </h2>
-          <p className="mt-4 text-lg" style={{ color: colors.foreground, opacity: 0.7 }}>
+          <p className="mt-4 text-lg text-white/40">
             Todo lo que necesitás saber antes de comprar.
           </p>
         </div>
@@ -51,28 +49,22 @@ export function FAQ() {
           {faqs.map((faq, i) => (
             <div
               key={i}
-              className="rounded-xl border transition-all"
-              style={{ borderColor: colors.border }}
+              className="rounded-xl border border-white/[0.06] bg-white/[0.02] transition-all hover:border-white/[0.12]"
             >
               <button
                 className="flex w-full items-center justify-between px-6 py-4 text-left"
                 onClick={() => setOpenIndex(openIndex === i ? null : i)}
               >
-                <span className="font-medium" style={{ color: colors.foreground }}>
-                  {faq.q}
-                </span>
+                <span className="font-medium text-white">{faq.q}</span>
                 <ChevronDown
-                  className={`h-5 w-5 transition-transform ${
+                  className={`h-5 w-5 shrink-0 text-white/30 transition-transform ${
                     openIndex === i ? "rotate-180" : ""
                   }`}
-                  style={{ color: colors.foreground, opacity: 0.5 }}
                 />
               </button>
               {openIndex === i && (
                 <div className="px-6 pb-4">
-                  <p className="text-sm leading-relaxed" style={{ color: colors.foreground, opacity: 0.7 }}>
-                    {faq.a}
-                  </p>
+                  <p className="text-sm leading-relaxed text-white/40">{faq.a}</p>
                 </div>
               )}
             </div>

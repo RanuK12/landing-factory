@@ -6,8 +6,9 @@ export function generateStaticParams() {
   return nichos.map((nicho) => ({ nicho: nicho.id }));
 }
 
-export default function NichoPage({ params }: { params: { nicho: string } }) {
-  const nicho = nichos.find((n) => n.id === params.nicho);
+export default async function NichoPage({ params }: { params: Promise<{ nicho: string }> }) {
+  const { nicho: nichoId } = await params;
+  const nicho = nichos.find((n) => n.id === nichoId);
   if (!nicho) return notFound();
 
   return (

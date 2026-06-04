@@ -18,56 +18,38 @@ const extras = [
 ];
 
 export function Pricing() {
-  const { colors, nicho } = useTheme();
+  const { nicho } = useTheme();
 
   return (
-    <section id="precios" className="py-24" style={{ backgroundColor: colors.background }}>
+    <section id="precios" className="py-24">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-3xl font-bold tracking-tight" style={{ color: colors.foreground }}>
+          <h2 className="text-3xl font-bold tracking-tight text-white">
             Precio único, sin vueltas
           </h2>
-          <p className="mt-4 text-lg" style={{ color: colors.foreground, opacity: 0.7 }}>
+          <p className="mt-4 text-lg text-white/40">
             Pagás una vez y la landing es tuya para siempre.
           </p>
         </div>
 
-        <div className="mt-16 mx-auto max-w-md">
-          <Card
-            className="relative overflow-hidden border-2"
-            style={{ borderColor: colors.primary }}
-          >
-            <div
-              className="absolute top-0 h-1 w-full"
-              style={{ backgroundColor: colors.primary }}
-            />
+        <div className="mx-auto mt-16 max-w-md">
+          <Card className="relative overflow-hidden border-2 border-cyan-500/30 bg-white/[0.03]">
+            <div className="absolute top-0 h-1 w-full bg-gradient-to-r from-cyan-500 to-blue-500" />
             <CardContent className="p-8">
-              <Badge
-                className="mb-4"
-                style={{
-                  backgroundColor: colors.primary,
-                  color: "white",
-                  opacity: 0.9,
-                }}
-              >
+              <Badge className="mb-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white">
                 Más elegido
               </Badge>
               <div className="flex items-baseline gap-1">
-                <span className="text-4xl font-bold" style={{ color: colors.foreground }}>
-                  ${nicho.price}
-                </span>
-                <span className="text-sm" style={{ color: colors.foreground, opacity: 0.5 }}>
-                  / único
-                </span>
+                <span className="text-4xl font-bold text-white">${nicho.price}</span>
+                <span className="text-sm text-white/40">/ único</span>
               </div>
-              <p className="mt-2 text-sm" style={{ color: colors.foreground, opacity: 0.6 }}>
+              <p className="mt-2 text-sm text-white/50">
                 Landing completa para {nicho.name.toLowerCase()}
               </p>
 
               <Button
-                className="mt-6 w-full"
+                className="mt-6 w-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white hover:from-cyan-400 hover:to-blue-500"
                 size="lg"
-                style={{ backgroundColor: colors.primary, color: "white" }}
               >
                 Comprar ahora
               </Button>
@@ -75,10 +57,8 @@ export function Pricing() {
               <div className="mt-8 space-y-3">
                 {extras.map((extra, i) => (
                   <div key={i} className="flex items-center gap-3">
-                    <Check className="h-4 w-4 shrink-0" style={{ color: colors.primary }} />
-                    <span className="text-sm" style={{ color: colors.foreground, opacity: 0.7 }}>
-                      {extra}
-                    </span>
+                    <Check className="h-4 w-4 shrink-0 text-cyan-400" />
+                    <span className="text-sm text-white/50">{extra}</span>
                   </div>
                 ))}
               </div>
