@@ -1,44 +1,23 @@
-import { Button } from "@/components/ui/button";
-import Link from "next/link";
+import LeadCaptureForm from "./LeadCaptureForm";
 
-interface CTAProps {
-  title: string;
-  subtitle: string;
-  buttonText: string;
-  buttonLink: string;
-}
-
-export default function CTA({
-  title,
-  subtitle,
-  buttonText,
-  buttonLink,
-}: CTAProps) {
+export default function CTA() {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 py-20 lg:py-28">
+    <section className="relative overflow-hidden bg-gradient-to-br from-slate-50 via-white to-blue-50 py-20 lg:py-28">
       {/* Decorative shapes */}
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
-        <div className="absolute -top-24 -left-24 h-96 w-96 rounded-full bg-white/10 blur-3xl" />
-        <div className="absolute -bottom-24 -right-24 h-96 w-96 rounded-full bg-white/10 blur-3xl" />
+        <div className="absolute -top-24 -left-24 h-96 w-96 rounded-full bg-blue-100/60 blur-3xl" />
+        <div className="absolute -bottom-24 -right-24 h-96 w-96 rounded-full bg-indigo-100/50 blur-3xl" />
       </div>
 
       <div className="relative z-10 mx-auto max-w-4xl px-6 text-center lg:px-8">
-        <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl">
-          {title}
+        <h2 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl lg:text-5xl">
+          Your Free Accessibility Audit Is One Click Away
         </h2>
-        <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-blue-100 sm:text-xl">
-          {subtitle}
+        <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-slate-600 sm:text-xl">
+          Get a detailed WCAG 2.1 compliance report within 48 hours. No commitment, no credit card — just clarity on where you stand.
         </p>
         <div className="mt-10">
-          <Link href={buttonLink}>
-            <Button
-              size="lg"
-              variant="secondary"
-              className="px-8 text-base font-semibold"
-            >
-              {buttonText}
-            </Button>
-          </Link>
+          <LeadCaptureForm />
         </div>
       </div>
     </section>

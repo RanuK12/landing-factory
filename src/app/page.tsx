@@ -219,12 +219,7 @@ export default function Home() {
         testimonials={testimonials}
       />
 
-      <CTA
-        title="Your Free Accessibility Audit Is One Click Away"
-        subtitle="Get a detailed WCAG 2.1 compliance report within 48 hours. No commitment, no credit card — just clarity on where you stand."
-        buttonText="Get Your Free Audit"
-        buttonLink="mailto:emilio@ranuk.dev?subject=ADA%20Accessibility%20Audit%20Request"
-      />
+      <CTA />
 
       <Footer
         companyName="Ranuk IT Solutions"

@@ -6,7 +6,6 @@ import {
   CardTitle,
   CardFooter,
 } from "@/components/ui/card";
-import Link from "next/link";
 
 interface Plan {
   name: string;
@@ -97,14 +96,14 @@ export default function Pricing({
               </CardContent>
 
               <CardFooter className="pb-8">
-                <Link href="#" className="w-full">
+                <a href="#cta" className="w-full">
                   <Button
                     className="w-full"
                     variant={plan.highlighted ? "default" : "outline"}
                   >
                     {plan.ctaText}
                   </Button>
-                </Link>
+                </a>
               </CardFooter>
             </Card>
           ))}
