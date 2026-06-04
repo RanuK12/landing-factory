@@ -1,10 +1,12 @@
 "use client";
 
 import { useTheme } from "./theme-provider";
+import { useLang } from "@/components/language-provider";
 import { ExternalLink } from "lucide-react";
 
 export function Footer() {
   const { businessName } = useTheme();
+  const { t } = useLang();
 
   return (
     <footer className="bg-[#0a0a0f]">
@@ -31,9 +33,7 @@ export function Footer() {
                 </span>
               </div>
             </div>
-            <p className="mt-3 text-sm text-white/40">
-              Professional landing pages. Real code. No monthly fees.
-            </p>
+            <p className="mt-3 text-sm text-white/40">{t("footer_tagline")}</p>
             <a
               href="https://ranuk.dev"
               target="_blank"
@@ -47,27 +47,27 @@ export function Footer() {
 
           <div>
             <h4 className="mb-4 text-xs font-bold uppercase tracking-widest text-white/20">
-              Product
+              {t("footer_product")}
             </h4>
             <ul className="space-y-2 text-sm text-white/40">
               <li>
                 <a href="#services" className="transition-colors hover:text-white">
-                  Services
+                  {t("nav_services")}
                 </a>
               </li>
               <li>
                 <a href="#pricing" className="transition-colors hover:text-white">
-                  Pricing
+                  {t("nav_pricing")}
                 </a>
               </li>
               <li>
                 <a href="#faq" className="transition-colors hover:text-white">
-                  FAQ
+                  {t("nav_faq")}
                 </a>
               </li>
               <li>
                 <a href="#contact" className="transition-colors hover:text-white">
-                  Contact
+                  {t("nav_contact")}
                 </a>
               </li>
             </ul>
@@ -75,22 +75,22 @@ export function Footer() {
 
           <div>
             <h4 className="mb-4 text-xs font-bold uppercase tracking-widest text-white/20">
-              Company
+              {t("footer_company")}
             </h4>
             <ul className="space-y-2 text-sm text-white/40">
               <li>
                 <a href="mailto:emilio@ranuk.dev" className="transition-colors hover:text-white">
-                  Contact
+                  {t("nav_contact")}
                 </a>
               </li>
               <li>
                 <a href="#" className="transition-colors hover:text-white">
-                  Terms
+                  {t("footer_terms")}
                 </a>
               </li>
               <li>
                 <a href="#" className="transition-colors hover:text-white">
-                  Privacy
+                  {t("footer_privacy")}
                 </a>
               </li>
             </ul>
@@ -102,9 +102,7 @@ export function Footer() {
             <p className="text-xs text-white/20">
               © {new Date().getFullYear()} Ranuk IT Solutions. All rights reserved.
             </p>
-            <p className="text-xs text-white/15">
-              Built with ☕ by Emilio Ranucoli
-            </p>
+            <p className="text-xs text-white/15">{t("footer_built")}</p>
           </div>
         </div>
       </div>

@@ -1,15 +1,16 @@
 "use client";
 
 import { useTheme } from "./theme-provider";
+import { useLang } from "@/components/language-provider";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Sparkles } from "lucide-react";
 
 export function Hero() {
-  const { businessName, tagline, colors, nicho } = useTheme();
+  const { businessName, colors, nicho } = useTheme();
+  const { t } = useLang();
 
   return (
     <section className="relative overflow-hidden pb-20 pt-24 sm:pt-32">
-      {/* Background decoration */}
       <div
         className="absolute -top-40 right-0 h-96 w-96 rounded-full opacity-[0.07] blur-[128px]"
         style={{ backgroundColor: colors.primary }}
@@ -23,21 +24,29 @@ export function Hero() {
         <div className="mx-auto max-w-3xl text-center">
           <div
             className="mb-6 inline-flex items-center gap-2 rounded-full border px-4 py-1.5 text-sm font-medium"
-            style={{ borderColor: "rgba(255,255,255,0.08)", color: "rgba(255,255,255,0.5)" }}
+            style={{
+              borderColor: "rgba(255,255,255,0.08)",
+              color: "rgba(255,255,255,0.5)",
+            }}
           >
             <Sparkles className="h-4 w-4" />
-            Professional landing in 24h
+            {t("hero_badge")}
           </div>
 
           <h1
-            className="text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl text-white"
+            className="text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl"
             style={{ fontFamily: "var(--font-space-grotesk), sans-serif" }}
           >
-            {tagline}
+            {t("hero_title_line1")}{" "}
+            <span className="bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-400 bg-clip-text text-transparent">
+              {t("hero_title_line2")}
+            </span>{" "}
+            {t("hero_title_line3")}
           </h1>
 
           <p className="mt-6 text-lg leading-8 text-white/50">
-            {businessName} — {nicho.description}. Designed to convert visitors into customers.
+            {businessName} — {nicho.description}.{" "}
+            {t("hero_subtitle")}
           </p>
 
           <div className="mt-10 flex items-center justify-center gap-4">
@@ -46,7 +55,7 @@ export function Hero() {
               style={{ backgroundColor: colors.primary, color: "white" }}
               className="hover:opacity-90"
             >
-              Get My Landing
+              {t("hero_cta")}
               <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
             <Button
@@ -54,13 +63,11 @@ export function Hero() {
               variant="outline"
               className="border-white/10 bg-white/[0.03] text-white/70 hover:border-white/20 hover:bg-white/[0.06]"
             >
-              See Examples
+              {t("hero_examples")}
             </Button>
           </div>
 
-          <p className="mt-4 text-sm text-white/30">
-            ⚡ Real Code · Hosting Included · No Monthly Fees
-          </p>
+          <p className="mt-4 text-sm text-white/30">{t("hero_tagline")}</p>
         </div>
       </div>
     </section>

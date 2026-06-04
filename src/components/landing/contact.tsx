@@ -1,6 +1,7 @@
 "use client";
 
 import { useTheme } from "./theme-provider";
+import { useLang } from "@/components/language-provider";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -8,6 +9,7 @@ import { Send, Mail, MessageCircle } from "lucide-react";
 
 export function Contact() {
   const { businessName } = useTheme();
+  const { t } = useLang();
 
   return (
     <section id="contact" className="py-24">
@@ -17,37 +19,35 @@ export function Contact() {
             className="text-3xl font-bold tracking-tight text-white"
             style={{ fontFamily: "var(--font-space-grotesk), sans-serif" }}
           >
-            Ready for your landing?
+            {t("contact_title")}
           </h2>
-          <p className="mt-4 text-lg text-white/40">
-            Fill out the form and get your professional website in 24 hours.
-          </p>
+          <p className="mt-4 text-lg text-white/40">{t("contact_subtitle")}</p>
         </div>
 
         <div className="mx-auto mt-16 max-w-lg">
           <form className="space-y-4">
             <div className="grid gap-4 sm:grid-cols-2">
               <Input
-                placeholder="Name"
+                placeholder={t("contact_name")}
                 className="border-white/10 bg-white/[0.03] text-white placeholder:text-white/30"
               />
               <Input
-                placeholder="Phone"
+                placeholder={t("contact_phone")}
                 type="tel"
                 className="border-white/10 bg-white/[0.03] text-white placeholder:text-white/30"
               />
             </div>
             <Input
-              placeholder="Email"
+              placeholder={t("contact_email")}
               type="email"
               className="border-white/10 bg-white/[0.03] text-white placeholder:text-white/30"
             />
             <Input
-              placeholder="Your business name"
+              placeholder={t("contact_business")}
               className="border-white/10 bg-white/[0.03] text-white placeholder:text-white/30"
             />
             <Textarea
-              placeholder="Tell us about your project..."
+              placeholder={t("contact_message")}
               className="min-h-[120px] border-white/10 bg-white/[0.03] text-white placeholder:text-white/30"
             />
             <Button
@@ -56,7 +56,7 @@ export function Contact() {
               size="lg"
             >
               <Send className="mr-2 h-4 w-4" />
-              Submit & Get a Quote
+              {t("contact_submit")}
             </Button>
           </form>
 
@@ -75,7 +75,7 @@ export function Contact() {
               className="flex items-center gap-2 text-sm font-medium text-emerald-400/70 transition-colors hover:text-emerald-400"
             >
               <MessageCircle className="h-4 w-4" />
-              WhatsApp
+              {t("contact_whatsapp")}
             </a>
           </div>
         </div>

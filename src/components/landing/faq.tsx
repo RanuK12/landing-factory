@@ -1,37 +1,21 @@
 "use client";
 
 import { useState } from "react";
+import { useLang } from "@/components/language-provider";
 import { ChevronDown } from "lucide-react";
-
-const faqs = [
-  {
-    q: "How long does it take?",
-    a: "Between 24 and 48 business hours. You fill out a form with your details and we generate your landing automatically.",
-  },
-  {
-    q: "Can I customize it later?",
-    a: "Yes. We give you access to the code (Next.js) or you can request changes. We include 15 days of unlimited edits.",
-  },
-  {
-    q: "Does it include hosting?",
-    a: "Yes. We host your landing for 1 year at no additional cost on Vercel. After that, you can keep it with us or take it anywhere.",
-  },
-  {
-    q: "What if I don't like it?",
-    a: "We make all the changes you need until it's perfect. No additional cost during the first 15 days.",
-  },
-  {
-    q: "Can I use my own domain?",
-    a: "Yes, we include a free .com domain for the first year. If you already have one, we set it up at no cost.",
-  },
-  {
-    q: "Is it optimized for Google?",
-    a: "Absolutely. Every landing comes with on-page SEO, meta tags, Open Graph, structured data, and sitemap. We aim for top rankings.",
-  },
-];
 
 export function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
+  const { t } = useLang();
+
+  const faqs = [
+    { q: t("faq_1_q"), a: t("faq_1_a") },
+    { q: t("faq_2_q"), a: t("faq_2_a") },
+    { q: t("faq_3_q"), a: t("faq_3_a") },
+    { q: t("faq_4_q"), a: t("faq_4_a") },
+    { q: t("faq_5_q"), a: t("faq_5_a") },
+    { q: t("faq_6_q"), a: t("faq_6_a") },
+  ];
 
   return (
     <section id="faq" className="border-y border-white/[0.04] bg-white/[0.01] py-24">
@@ -41,11 +25,9 @@ export function FAQ() {
             className="text-3xl font-bold tracking-tight text-white"
             style={{ fontFamily: "var(--font-space-grotesk), sans-serif" }}
           >
-            Frequently asked questions
+            {t("faq_title")}
           </h2>
-          <p className="mt-4 text-lg text-white/40">
-            Everything you need to know before buying.
-          </p>
+          <p className="mt-4 text-lg text-white/40">{t("faq_subtitle")}</p>
         </div>
 
         <div className="mt-16 space-y-2">

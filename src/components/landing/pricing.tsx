@@ -1,24 +1,26 @@
 "use client";
 
 import { useTheme } from "./theme-provider";
+import { useLang } from "@/components/language-provider";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Check } from "lucide-react";
 
-const extras = [
-  "Advanced SEO + Google Analytics",
-  "Integrated blog",
-  "Multi-step contact form",
-  "Social media integration",
-  "1 year hosting included",
-  "Free .com domain",
-  "30 days support",
-  "Unlimited edits for 15 days",
-];
-
 export function Pricing() {
   const { nicho } = useTheme();
+  const { t } = useLang();
+
+  const extras = [
+    t("extra_seo"),
+    t("extra_blog"),
+    t("extra_form"),
+    t("extra_social"),
+    t("extra_hosting"),
+    t("extra_domain"),
+    t("extra_support"),
+    t("extra_edits"),
+  ];
 
   return (
     <section id="pricing" className="py-24">
@@ -28,11 +30,9 @@ export function Pricing() {
             className="text-3xl font-bold tracking-tight text-white"
             style={{ fontFamily: "var(--font-space-grotesk), sans-serif" }}
           >
-            Simple pricing, no strings
+            {t("pricing_title")}
           </h2>
-          <p className="mt-4 text-lg text-white/40">
-            Pay once and the landing is yours forever.
-          </p>
+          <p className="mt-4 text-lg text-white/40">{t("pricing_subtitle")}</p>
         </div>
 
         <div className="mx-auto mt-16 max-w-md">
@@ -40,21 +40,21 @@ export function Pricing() {
             <div className="absolute top-0 h-1 w-full bg-gradient-to-r from-emerald-500 to-teal-500" />
             <CardContent className="p-8">
               <Badge className="mb-4 bg-gradient-to-r from-emerald-500 to-teal-600 text-white">
-                Most Popular
+                {t("pricing_popular")}
               </Badge>
               <div className="flex items-baseline gap-1">
                 <span className="text-4xl font-bold text-white">${nicho.price}</span>
-                <span className="text-sm text-white/40">/ one-time</span>
+                <span className="text-sm text-white/40">{t("pricing_onetime")}</span>
               </div>
               <p className="mt-2 text-sm text-white/50">
-                Complete landing for {nicho.name.toLowerCase()}
+                {t("pricing_complete")} {nicho.name.toLowerCase()}
               </p>
 
               <Button
                 className="mt-6 w-full bg-gradient-to-r from-emerald-500 to-teal-600 text-white hover:from-emerald-400 hover:to-teal-500"
                 size="lg"
               >
-                Buy Now
+                {t("pricing_buy")}
               </Button>
 
               <div className="mt-8 space-y-3">

@@ -1,6 +1,7 @@
 "use client";
 
 import { ThemeProvider } from "./theme-provider";
+import { LanguageProvider } from "@/components/language-provider";
 import { Header } from "./header";
 import { Hero } from "./hero";
 import { Features } from "./features";
@@ -24,23 +25,25 @@ export function LandingPage({
   const colors = colorSchemes[nicho.colorScheme];
 
   return (
-    <ThemeProvider
-      nicho={nicho}
-      colors={colors}
-      businessName={businessName}
-      tagline={tagline}
-    >
-      <div className="min-h-screen bg-[#0a0a0f] text-white">
-        <Header />
-        <main>
-          <Hero />
-          <Features />
-          <Pricing />
-          <FAQ />
-          <Contact />
-        </main>
-        <Footer />
-      </div>
-    </ThemeProvider>
+    <LanguageProvider>
+      <ThemeProvider
+        nicho={nicho}
+        colors={colors}
+        businessName={businessName}
+        tagline={tagline}
+      >
+        <div className="min-h-screen bg-[#0a0a0f] text-white">
+          <Header />
+          <main>
+            <Hero />
+            <Features />
+            <Pricing />
+            <FAQ />
+            <Contact />
+          </main>
+          <Footer />
+        </div>
+      </ThemeProvider>
+    </LanguageProvider>
   );
 }
