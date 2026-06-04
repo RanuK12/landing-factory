@@ -5,28 +5,28 @@ import { ChevronDown } from "lucide-react";
 
 const faqs = [
   {
-    q: "¿Cuánto tarda en estar lista?",
-    a: "Entre 24 y 48 horas hábiles. Completás un formulario con tus datos y nosotros generamos la landing automágicamente.",
+    q: "How long does it take?",
+    a: "Between 24 and 48 business hours. You fill out a form with your details and we generate your landing automatically.",
   },
   {
-    q: "¿Puedo personalizarla después?",
-    a: "Sí. Te damos acceso al código (Next.js) o podés pedirnos cambios. Incluimos 15 días de ediciones ilimitadas.",
+    q: "Can I customize it later?",
+    a: "Yes. We give you access to the code (Next.js) or you can request changes. We include 15 days of unlimited edits.",
   },
   {
-    q: "¿Incluye hosting?",
-    a: "Sí. Hosteamos tu landing por 1 año sin costo adicional en Vercel. Después podés mantenerlo con nosotros o llevarlo a donde quieras.",
+    q: "Does it include hosting?",
+    a: "Yes. We host your landing for 1 year at no additional cost on Vercel. After that, you can keep it with us or take it anywhere.",
   },
   {
-    q: "¿Qué pasa si no me gusta?",
-    a: "Te hacemos los cambios que necesites hasta que quede perfecta. Sin costo adicional durante los primeros 15 días.",
+    q: "What if I don't like it?",
+    a: "We make all the changes you need until it's perfect. No additional cost during the first 15 days.",
   },
   {
-    q: "¿Puedo tener mi propio dominio?",
-    a: "Sí, incluimos un dominio .com gratis el primer año. Si ya tenés uno, lo configuramos sin costo.",
+    q: "Can I use my own domain?",
+    a: "Yes, we include a free .com domain for the first year. If you already have one, we set it up at no cost.",
   },
   {
-    q: "¿Está optimizada para Google?",
-    a: "Totalmente. Cada landing viene con SEO on-page, meta tags, Open Graph, structured data y sitemap. Apuntamos a las primeras posiciones.",
+    q: "Is it optimized for Google?",
+    a: "Absolutely. Every landing comes with on-page SEO, meta tags, Open Graph, structured data, and sitemap. We aim for top rankings.",
   },
 ];
 
@@ -37,11 +37,14 @@ export function FAQ() {
     <section id="faq" className="border-y border-white/[0.04] bg-white/[0.01] py-24">
       <div className="mx-auto max-w-3xl px-4 sm:px-6">
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-white">
-            Preguntas frecuentes
+          <h2
+            className="text-3xl font-bold tracking-tight text-white"
+            style={{ fontFamily: "var(--font-space-grotesk), sans-serif" }}
+          >
+            Frequently asked questions
           </h2>
           <p className="mt-4 text-lg text-white/40">
-            Todo lo que necesitás saber antes de comprar.
+            Everything you need to know before buying.
           </p>
         </div>
 

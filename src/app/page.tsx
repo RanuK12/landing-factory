@@ -1,5 +1,4 @@
 import Link from "next/link";
-/* Using regular img tags for GitHub Pages basePath compatibility */
 import { nichos } from "@/data/nichos";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -16,11 +15,15 @@ import {
   ChevronRight,
   Mail,
   ExternalLink,
+  Check,
+  Rocket,
+  Layout,
+  Search,
 } from "lucide-react";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-[#0a0a0f] text-white selection:bg-cyan-500/30">
+    <div className="min-h-screen bg-[#0a0a0f] text-white selection:bg-emerald-500/30">
       {/* ── Navbar ── */}
       <header className="sticky top-0 z-50 w-full border-b border-white/[0.06] bg-[#0a0a0f]/80 backdrop-blur-xl">
         <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
@@ -33,39 +36,42 @@ export default function Home() {
               className="rounded-lg"
             />
             <div className="flex flex-col">
-              <span className="text-sm font-bold tracking-tight text-white">
+              <span
+                className="text-sm font-bold tracking-tight text-white"
+                style={{ fontFamily: "var(--font-space-grotesk), sans-serif" }}
+              >
                 Landing Factory
               </span>
-              <span className="text-[10px] font-medium uppercase tracking-widest text-white/30">
-                by Ranuk IT
+              <span className="text-[10px] font-medium uppercase tracking-widest text-emerald-500/60">
+                by Ranuk IT Solutions
               </span>
             </div>
           </Link>
 
           <nav className="hidden items-center gap-8 md:flex">
             <a
-              href="#nichos"
+              href="#industries"
               className="text-sm font-medium text-white/50 transition-colors hover:text-white"
             >
-              Nichos
+              Industries
             </a>
             <a
-              href="#como-funciona"
+              href="#how-it-works"
               className="text-sm font-medium text-white/50 transition-colors hover:text-white"
             >
-              Cómo funciona
+              How It Works
             </a>
             <a
-              href="#por-que-ranuk"
+              href="#why-ranuk"
               className="text-sm font-medium text-white/50 transition-colors hover:text-white"
             >
-              Por qué Ranuk
+              Why Ranuk
             </a>
             <a
-              href="#nichos"
-              className="inline-flex h-7 items-center gap-1.5 rounded-lg bg-gradient-to-r from-cyan-500 to-blue-600 px-3 text-xs font-medium text-white transition-all hover:from-cyan-400 hover:to-blue-500"
+              href="#industries"
+              className="inline-flex h-8 items-center gap-1.5 rounded-lg bg-gradient-to-r from-emerald-500 to-teal-600 px-4 text-xs font-semibold text-white transition-all hover:from-emerald-400 hover:to-teal-500"
             >
-              Crear mi landing
+              Get Your Landing
               <ArrowRight className="h-3 w-3" />
             </a>
           </nav>
@@ -75,104 +81,120 @@ export default function Home() {
       {/* ── Hero ── */}
       <section className="relative overflow-hidden pb-20 pt-24 sm:pt-32">
         {/* Gradient orbs */}
-        <div className="absolute -top-40 left-1/2 h-[600px] w-[600px] -translate-x-1/2 rounded-full bg-cyan-500/[0.07] blur-[128px]" />
-        <div className="absolute top-20 right-0 h-96 w-96 rounded-full bg-blue-600/[0.05] blur-[100px]" />
+        <div className="absolute -top-40 left-1/2 h-[600px] w-[600px] -translate-x-1/2 rounded-full bg-emerald-500/[0.07] blur-[128px]" />
+        <div className="absolute top-20 right-0 h-96 w-96 rounded-full bg-teal-600/[0.05] blur-[100px]" />
 
         <div className="relative mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8">
           <Badge
             variant="outline"
-            className="mb-8 border-cyan-500/20 bg-cyan-500/5 px-4 py-1.5 text-xs font-medium text-cyan-400"
+            className="mb-8 border-emerald-500/20 bg-emerald-500/5 px-4 py-1.5 text-xs font-medium text-emerald-400"
           >
             <Sparkles className="mr-1.5 h-3 w-3" />
-            Landing profesional en 24 horas
+            Professional landing in 24 hours
           </Badge>
 
-          <h1 className="mx-auto max-w-4xl text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl xl:text-7xl">
-            Tu negocio merece una{" "}
-            <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-indigo-400 bg-clip-text text-transparent">
-              landing que convierta
+          <h1
+            className="mx-auto max-w-4xl text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl xl:text-7xl"
+            style={{ fontFamily: "var(--font-space-grotesk), sans-serif" }}
+          >
+            Your business deserves a{" "}
+            <span className="bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-400 bg-clip-text text-transparent">
+              landing that converts
             </span>
           </h1>
 
           <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-white/50 sm:text-xl">
-            Elegí tu nicho, completá un formulario y recibí tu landing profesional
-            con código real. Sin mensualidades, sin plataformas lentas.
+            Pick your industry, fill out a form, and get a professional landing page
+            with real code. No monthly fees, no slow platforms.
           </p>
 
           <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <a
-              href="#nichos"
-              className="inline-flex h-11 items-center gap-2 rounded-lg bg-gradient-to-r from-cyan-500 to-blue-600 px-6 text-sm font-medium text-white transition-all hover:from-cyan-400 hover:to-blue-500"
+              href="#industries"
+              className="inline-flex h-12 items-center gap-2 rounded-lg bg-gradient-to-r from-emerald-500 to-teal-600 px-7 text-sm font-semibold text-white transition-all hover:from-emerald-400 hover:to-teal-500"
             >
-              Elegí tu nicho
+              Choose Your Industry
               <ArrowRight className="h-4 w-4" />
             </a>
             <a
-              href="#como-funciona"
-              className="inline-flex h-11 items-center gap-2 rounded-lg border border-white/10 bg-white/[0.03] px-6 text-sm font-medium text-white/70 transition-all hover:border-white/20 hover:bg-white/[0.06] hover:text-white"
+              href="#how-it-works"
+              className="inline-flex h-12 items-center gap-2 rounded-lg border border-white/10 bg-white/[0.03] px-7 text-sm font-medium text-white/70 transition-all hover:border-white/20 hover:bg-white/[0.06] hover:text-white"
             >
-              Cómo funciona
+              How It Works
             </a>
           </div>
 
           {/* Trust bar */}
-          <div className="mx-auto mt-16 grid max-w-3xl grid-cols-3 gap-8 border-t border-white/[0.06] pt-10">
+          <div className="mx-auto mt-16 grid max-w-3xl grid-cols-2 gap-6 border-t border-white/[0.06] pt-10 sm:grid-cols-4">
             {[
-              { icon: Zap, label: "24h", sub: "de entrega" },
-              { icon: Code2, label: "Código real", sub: "Next.js + Tailwind" },
-              { icon: Globe, label: "Hosting", sub: "1 año incluido" },
+              { icon: <Zap className="h-4 w-4 text-emerald-400" />, label: "24h Delivery" },
+              { icon: <Code2 className="h-4 w-4 text-emerald-400" />, label: "Real Code" },
+              { icon: <Shield className="h-4 w-4 text-emerald-400" />, label: "No Monthly Fees" },
+              { icon: <Search className="h-4 w-4 text-emerald-400" />, label: "SEO Optimized" },
             ].map((item) => (
-              <div key={item.label} className="flex flex-col items-center gap-1">
-                <item.icon className="mb-1 h-5 w-5 text-cyan-400/70" />
-                <span className="text-sm font-semibold text-white">{item.label}</span>
-                <span className="text-xs text-white/40">{item.sub}</span>
+              <div key={item.label} className="flex flex-col items-center gap-2">
+                {item.icon}
+                <span className="text-xs font-medium text-white/40">{item.label}</span>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ── Social proof ── */}
-      <section className="border-y border-white/[0.04] bg-white/[0.01] py-8">
-        <div className="mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8">
-          <p className="text-xs font-medium uppercase tracking-widest text-white/20">
-            Empresas y profesionales que ya confían en Ranuk IT
-          </p>
-        </div>
-      </section>
-
-      {/* ── Nichos ── */}
-      <section id="nichos" className="py-24">
+      {/* ── Industries ── */}
+      <section id="industries" className="relative border-t border-white/[0.04] py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="mx-auto max-w-2xl text-center">
+          <div className="mx-auto mb-16 max-w-2xl text-center">
             <Badge
               variant="outline"
-              className="mb-4 border-white/10 bg-white/[0.03] text-xs text-white/50"
+              className="mb-4 border-emerald-500/20 bg-emerald-500/5 px-3 py-1 text-xs font-medium text-emerald-400"
             >
-              Templates especializados
+              Industries
             </Badge>
-            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-              Elegí tu nicho
+            <h2
+              className="text-3xl font-bold tracking-tight sm:text-4xl"
+              style={{ fontFamily: "var(--font-space-grotesk), sans-serif" }}
+            >
+              Choose your industry
             </h2>
             <p className="mt-4 text-lg text-white/40">
-              Cada template está diseñado para convertir visitantes en clientes.
+              Pre-built templates designed to convert visitors into customers.
+              Pick yours and get started.
             </p>
           </div>
 
-          <div className="mt-16 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {nichos.map((nicho) => (
               <Link key={nicho.id} href={`/landing/${nicho.id}`}>
-                <Card className="group relative h-full cursor-pointer overflow-hidden border-white/[0.06] bg-white/[0.02] transition-all duration-300 hover:border-cyan-500/20 hover:bg-white/[0.04] hover:shadow-lg hover:shadow-cyan-500/[0.03]">
+                <Card className="group relative overflow-hidden border-white/[0.06] bg-white/[0.02] transition-all hover:border-emerald-500/20 hover:bg-white/[0.04]">
                   <CardContent className="p-6">
-                    <div className="mb-4 text-3xl">{nicho.icon}</div>
-                    <h3 className="text-lg font-semibold text-white">{nicho.name}</h3>
-                    <p className="mt-2 text-sm text-white/40">{nicho.description}</p>
-                    <div className="mt-5 flex items-center justify-between">
-                      <span className="text-lg font-bold text-cyan-400">${nicho.price}</span>
-                      <span className="flex items-center gap-1 text-sm font-medium text-white/30 transition-colors group-hover:text-cyan-400">
-                        Ver más
-                        <ChevronRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" />
+                    <div className="mb-4 flex items-center justify-between">
+                      <span className="text-3xl">{nicho.icon}</span>
+                      <span className="text-lg font-bold text-emerald-400">
+                        ${nicho.price}
                       </span>
+                    </div>
+                    <h3
+                      className="mb-2 text-lg font-bold text-white"
+                      style={{ fontFamily: "var(--font-space-grotesk), sans-serif" }}
+                    >
+                      {nicho.name}
+                    </h3>
+                    <p className="mb-4 text-sm text-white/40">{nicho.description}</p>
+                    <ul className="mb-6 space-y-1.5">
+                      {nicho.features.slice(0, 4).map((f) => (
+                        <li
+                          key={f}
+                          className="flex items-center gap-2 text-xs text-white/50"
+                        >
+                          <Check className="h-3 w-3 text-emerald-500" />
+                          {f}
+                        </li>
+                      ))}
+                    </ul>
+                    <div className="flex items-center gap-1.5 text-sm font-medium text-emerald-400 transition-colors group-hover:text-emerald-300">
+                      View details
+                      <ChevronRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
                     </div>
                   </CardContent>
                 </Card>
@@ -182,183 +204,199 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── Cómo funciona ── */}
-      <section id="como-funciona" className="border-y border-white/[0.04] bg-white/[0.01] py-24">
+      {/* ── How It Works ── */}
+      <section id="how-it-works" className="relative border-t border-white/[0.04] py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="mx-auto max-w-2xl text-center">
+          <div className="mx-auto mb-16 max-w-2xl text-center">
             <Badge
               variant="outline"
-              className="mb-4 border-white/10 bg-white/[0.03] text-xs text-white/50"
+              className="mb-4 border-emerald-500/20 bg-emerald-500/5 px-3 py-1 text-xs font-medium text-emerald-400"
             >
-              Proceso simple
+              Process
             </Badge>
-            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-              Cómo funciona
+            <h2
+              className="text-3xl font-bold tracking-tight sm:text-4xl"
+              style={{ fontFamily: "var(--font-space-grotesk), sans-serif" }}
+            >
+              How it works
             </h2>
             <p className="mt-4 text-lg text-white/40">
-              3 pasos simples. De la idea a tu landing en menos de 24h.
+              Three simple steps to your professional landing page.
             </p>
           </div>
 
-          <div className="mt-16 grid gap-8 sm:grid-cols-3">
+          <div className="grid gap-8 md:grid-cols-3">
             {[
               {
                 step: "01",
-                title: "Elegí tu nicho",
-                desc: "Seleccioná el template que mejor se adapte a tu negocio.",
-                icon: Shield,
+                icon: <Layout className="h-6 w-6 text-emerald-400" />,
+                title: "Pick your industry",
+                desc: "Choose from our 6 pre-built templates designed for specific industries.",
               },
               {
                 step: "02",
-                title: "Completá tus datos",
-                desc: "Llenás un formulario con tu info, colores y contenido.",
-                icon: Clock,
+                icon: <Mail className="h-6 w-6 text-emerald-400" />,
+                title: "Fill out a form",
+                desc: "Tell us about your business, colors, content, and what you need.",
               },
               {
                 step: "03",
-                title: "Recibí tu landing",
-                desc: "En 24h tenés tu sitio funcionando con tu dominio.",
-                icon: TrendingUp,
-              },
-            ].map((item) => (
-              <div key={item.step} className="text-center">
-                <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-2xl border border-white/[0.06] bg-white/[0.03]">
-                  <item.icon className="h-6 w-6 text-cyan-400/70" />
-                </div>
-                <span className="text-xs font-bold uppercase tracking-widest text-cyan-400/50">
-                  Paso {item.step}
-                </span>
-                <h3 className="mt-2 text-lg font-semibold text-white">{item.title}</h3>
-                <p className="mt-2 text-sm text-white/40">{item.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── Por qué Ranuk IT ── */}
-      <section id="por-que-ranuk" className="py-24">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="mx-auto max-w-2xl text-center">
-            <Badge
-              variant="outline"
-              className="mb-4 border-white/10 bg-white/[0.03] text-xs text-white/50"
-            >
-              Ranuk IT Solutions
-            </Badge>
-            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-              ¿Por qué Ranuk IT?
-            </h2>
-            <p className="mt-4 text-lg text-white/40">
-              No somos una plataforma más. Somos un equipo de ingenieros que
-              construye landings que realmente convierten.
-            </p>
-          </div>
-
-          <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {[
-              {
-                title: "Código real, no plantillas",
-                desc: "Tu landing se construye con Next.js y Tailwind CSS. Rápida, responsive y escalable.",
-                icon: Code2,
-              },
-              {
-                title: "Diseño a medida",
-                desc: "No usamos themes genéricos. Cada landing está diseñada para tu marca y tu audiencia.",
-                icon: Sparkles,
-              },
-              {
-                title: "SEO profesional incluido",
-                desc: "Meta tags, Open Graph, structured data, sitemap. Listo para Google desde el día uno.",
-                icon: TrendingUp,
-              },
-              {
-                title: "Hosting rápido y gratis",
-                desc: "1 año de hosting en Vercel (CDN global) sin costo. Después te lo dejamos por $0.",
-                icon: Globe,
-              },
-              {
-                title: "Soporte humano",
-                desc: "15 días de ediciones ilimitadas. Después, soporte continuo. No te dejamos a la deriva.",
-                icon: Shield,
-              },
-              {
-                title: "Entrega en 24h",
-                desc: "De la idea a la landing online en menos de 24 horas. Sin demoras, sin excusas.",
-                icon: Clock,
+                icon: <Rocket className="h-6 w-6 text-emerald-400" />,
+                title: "Get your landing",
+                desc: "We build it with real code in 24 hours. You own everything. No lock-in.",
               },
             ].map((item) => (
               <div
-                key={item.title}
-                className="rounded-xl border border-white/[0.06] bg-white/[0.02] p-6 transition-all hover:border-white/[0.12] hover:bg-white/[0.04]"
+                key={item.step}
+                className="relative rounded-xl border border-white/[0.06] bg-white/[0.02] p-8"
               >
-                <item.icon className="mb-3 h-5 w-5 text-cyan-400/70" />
-                <h3 className="font-semibold text-white">{item.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-white/40">{item.desc}</p>
+                <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-emerald-500/10">
+                  {item.icon}
+                </div>
+                <span className="mb-2 block text-xs font-bold uppercase tracking-widest text-emerald-500/40">
+                  Step {item.step}
+                </span>
+                <h3
+                  className="mb-2 text-xl font-bold text-white"
+                  style={{ fontFamily: "var(--font-space-grotesk), sans-serif" }}
+                >
+                  {item.title}
+                </h3>
+                <p className="text-sm leading-relaxed text-white/40">{item.desc}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ── CTA Final ── */}
-      <section className="border-y border-white/[0.04] bg-gradient-to-b from-cyan-500/[0.03] to-transparent py-24">
-        <div className="mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-            ¿Listo para tener tu landing?
-          </h2>
-          <p className="mx-auto mt-4 max-w-xl text-lg text-white/40">
-            Elegí tu nicho y empezá hoy. Tu presencia online profesional está a un
-            clic de distancia.
-          </p>
-          <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
-            <a
-              href="#nichos"
-              className="inline-flex h-11 items-center gap-2 rounded-lg bg-gradient-to-r from-cyan-500 to-blue-600 px-6 text-sm font-medium text-white transition-all hover:from-cyan-400 hover:to-blue-500"
+      {/* ── Why Ranuk ── */}
+      <section id="why-ranuk" className="relative border-t border-white/[0.04] py-24">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto mb-16 max-w-2xl text-center">
+            <Badge
+              variant="outline"
+              className="mb-4 border-emerald-500/20 bg-emerald-500/5 px-3 py-1 text-xs font-medium text-emerald-400"
             >
-              Elegí tu nicho ahora
-              <ArrowRight className="h-4 w-4" />
-            </a>
-            <a
-              href="mailto:emilio@ranuk.dev"
-              className="inline-flex h-11 items-center gap-2 rounded-lg border border-white/10 bg-white/[0.03] px-6 text-sm font-medium text-white/70 transition-all hover:border-white/20 hover:bg-white/[0.06]"
+              Why Us
+            </Badge>
+            <h2
+              className="text-3xl font-bold tracking-tight sm:text-4xl"
+              style={{ fontFamily: "var(--font-space-grotesk), sans-serif" }}
             >
-              <Mail className="h-4 w-4" />
-              Contactanos
-            </a>
+              Why Ranuk IT
+            </h2>
+          </div>
+
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {[
+              {
+                icon: <Code2 className="h-5 w-5 text-emerald-400" />,
+                title: "Real Code",
+                desc: "No WordPress, no Wix, no Squarespace. Pure Next.js + Tailwind that you own.",
+              },
+              {
+                icon: <Zap className="h-5 w-5 text-emerald-400" />,
+                title: "24h Delivery",
+                desc: "Your landing page ready in 24 hours or less. Fast turnaround, no delays.",
+              },
+              {
+                icon: <Shield className="h-5 w-5 text-emerald-400" />,
+                title: "No Lock-in",
+                desc: "You own the code. Host it anywhere. No monthly fees. No dependencies.",
+              },
+              {
+                icon: <TrendingUp className="h-5 w-5 text-emerald-400" />,
+                title: "SEO Optimized",
+                desc: "Built-in SEO best practices. Fast loading, semantic HTML, meta tags.",
+              },
+            ].map((item) => (
+              <div key={item.title} className="text-center">
+                <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-emerald-500/10">
+                  {item.icon}
+                </div>
+                <h3
+                  className="mb-2 text-lg font-bold text-white"
+                  style={{ fontFamily: "var(--font-space-grotesk), sans-serif" }}
+                >
+                  {item.title}
+                </h3>
+                <p className="text-sm leading-relaxed text-white/40">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Banner ── */}
+      <section className="relative border-t border-white/[0.04] py-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="relative overflow-hidden rounded-2xl border border-white/[0.08] bg-white/[0.02]">
+            <div className="absolute inset-0 bg-gradient-to-r from-emerald-500/10 via-transparent to-teal-500/10" />
+            <div className="relative px-8 py-16 text-center sm:px-16">
+              <h2
+                className="text-3xl font-bold tracking-tight sm:text-4xl"
+                style={{ fontFamily: "var(--font-space-grotesk), sans-serif" }}
+              >
+                Ready to grow your business?
+              </h2>
+              <p className="mx-auto mt-4 max-w-xl text-lg text-white/40">
+                Get a professional landing page that converts visitors into customers.
+                Starting at $97. No monthly fees.
+              </p>
+              <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
+                <a
+                  href="#industries"
+                  className="inline-flex h-12 items-center gap-2 rounded-lg bg-gradient-to-r from-emerald-500 to-teal-600 px-8 text-sm font-semibold text-white transition-all hover:from-emerald-400 hover:to-teal-500"
+                >
+                  Get Started Now
+                  <ArrowRight className="h-4 w-4" />
+                </a>
+                <a
+                  href="mailto:emilio@ranuk.dev"
+                  className="inline-flex h-12 items-center gap-2 rounded-lg border border-white/10 bg-white/[0.03] px-8 text-sm font-medium text-white/70 transition-all hover:border-white/20 hover:bg-white/[0.06] hover:text-white"
+                >
+                  <Mail className="h-4 w-4" />
+                  Contact Us
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       {/* ── Footer ── */}
-      <footer className="bg-[#06060a] py-12">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid gap-8 sm:grid-cols-4">
-            <div className="sm:col-span-2">
-              <div className="flex items-center gap-3">
+      <footer className="border-t border-white/[0.04] bg-[#0a0a0f]">
+        <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+          <div className="grid gap-8 sm:grid-cols-3">
+            <div>
+              <div className="flex items-center gap-2.5">
                 <img
                   src="/landing-factory/ranuk-icon.png"
                   alt="Ranuk IT"
                   width={28}
                   height={28}
-                  className="rounded-lg"
+                  className="rounded-md"
                 />
                 <div>
-                  <span className="text-sm font-bold text-white">Landing Factory</span>
-                  <span className="block text-[10px] uppercase tracking-widest text-white/30">
+                  <span
+                    className="text-sm font-bold text-white"
+                    style={{ fontFamily: "var(--font-space-grotesk), sans-serif" }}
+                  >
+                    Landing Factory
+                  </span>
+                  <span className="block text-[9px] uppercase tracking-widest text-emerald-500/50">
                     by Ranuk IT Solutions
                   </span>
                 </div>
               </div>
-              <p className="mt-4 max-w-sm text-sm leading-relaxed text-white/30">
-                Landings profesionales con código real. Next.js, Tailwind CSS,
-                hosting incluido. Sin mensualidades, sin plataformas limitantes.
+              <p className="mt-3 text-sm text-white/40">
+                Professional landing pages. Real code. No monthly fees.
               </p>
               <a
                 href="https://ranuk.dev"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-3 inline-flex items-center gap-1.5 text-xs text-white/20 transition-colors hover:text-cyan-400"
+                className="mt-2 inline-flex items-center gap-1 text-xs text-white/20 transition-colors hover:text-emerald-400"
               >
                 ranuk.dev
                 <ExternalLink className="h-3 w-3" />
@@ -366,35 +404,64 @@ export default function Home() {
             </div>
 
             <div>
-              <h4 className="mb-3 text-xs font-bold uppercase tracking-widest text-white/20">
-                Producto
+              <h4 className="mb-4 text-xs font-bold uppercase tracking-widest text-white/20">
+                Product
               </h4>
               <ul className="space-y-2 text-sm text-white/40">
-                <li><a href="#nichos" className="transition-colors hover:text-white">Nichos</a></li>
-                <li><a href="#como-funciona" className="transition-colors hover:text-white">Cómo funciona</a></li>
-                <li><a href="#por-que-ranuk" className="transition-colors hover:text-white">Por qué Ranuk</a></li>
-                <li><a href="mailto:emilio@ranuk.dev" className="transition-colors hover:text-white">Contacto</a></li>
+                <li>
+                  <a href="#industries" className="transition-colors hover:text-white">
+                    Industries
+                  </a>
+                </li>
+                <li>
+                  <a href="#how-it-works" className="transition-colors hover:text-white">
+                    How It Works
+                  </a>
+                </li>
+                <li>
+                  <a href="#why-ranuk" className="transition-colors hover:text-white">
+                    Why Ranuk
+                  </a>
+                </li>
               </ul>
             </div>
 
             <div>
-              <h4 className="mb-3 text-xs font-bold uppercase tracking-widest text-white/20">
-                Legal
+              <h4 className="mb-4 text-xs font-bold uppercase tracking-widest text-white/20">
+                Company
               </h4>
               <ul className="space-y-2 text-sm text-white/40">
-                <li><a href="#" className="transition-colors hover:text-white">Términos</a></li>
-                <li><a href="#" className="transition-colors hover:text-white">Privacidad</a></li>
+                <li>
+                  <a
+                    href="mailto:emilio@ranuk.dev"
+                    className="transition-colors hover:text-white"
+                  >
+                    Contact
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="transition-colors hover:text-white">
+                    Terms
+                  </a>
+                </li>
+                <li>
+                  <a href="#" className="transition-colors hover:text-white">
+                    Privacy
+                  </a>
+                </li>
               </ul>
             </div>
           </div>
 
-          <div className="mt-10 flex flex-col items-center justify-between gap-4 border-t border-white/[0.04] pt-8 sm:flex-row">
-            <p className="text-xs text-white/20">
-              © {new Date().getFullYear()} Ranuk IT Solutions. Todos los derechos reservados.
-            </p>
-            <p className="text-xs text-white/15">
-              Hecho con ☕ por Emilio Ranucoli
-            </p>
+          <div className="mt-10 border-t border-white/[0.04] pt-8">
+            <div className="flex flex-col items-center justify-between gap-4 sm:flex-row">
+              <p className="text-xs text-white/20">
+                © {new Date().getFullYear()} Ranuk IT Solutions. All rights reserved.
+              </p>
+              <p className="text-xs text-white/15">
+                Built with ☕ by Emilio Ranucoli
+              </p>
+            </div>
           </div>
         </div>
       </footer>

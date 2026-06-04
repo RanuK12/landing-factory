@@ -18,8 +18,8 @@ interface LandingPageProps {
 
 export function LandingPage({
   nicho,
-  businessName = "Tu Negocio",
-  tagline = "Tu presencia profesional en la web",
+  businessName = "Your Business",
+  tagline = "Your Professional Web Presence",
 }: LandingPageProps) {
   const colors = colorSchemes[nicho.colorScheme];
 

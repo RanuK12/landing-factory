@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-/* img tags used instead of next/image for GitHub Pages basePath */
 import { useTheme } from "./theme-provider";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
@@ -26,29 +25,34 @@ export function Header() {
             className="rounded-md"
           />
           <div className="flex flex-col leading-none">
-            <span className="text-sm font-bold text-white">{businessName}</span>
-            <span className="text-[9px] uppercase tracking-widest text-white/30">
-              by Ranuk IT
+            <span
+              className="text-sm font-bold text-white"
+              style={{ fontFamily: "var(--font-space-grotesk), sans-serif" }}
+            >
+              {businessName}
+            </span>
+            <span className="text-[9px] uppercase tracking-widest text-emerald-500/50">
+              by Ranuk IT Solutions
             </span>
           </div>
         </Link>
 
         <nav className="hidden items-center gap-6 md:flex">
-          {["Servicios", "Precios", "FAQ", "Contacto"].map((item) => (
-            <Link
+          {["Services", "Pricing", "FAQ", "Contact"].map((item) => (
+            <a
               key={item}
               href={`#${item.toLowerCase()}`}
               className="text-sm font-medium text-white/50 transition-colors hover:text-white"
             >
               {item}
-            </Link>
+            </a>
           ))}
           <Button
             size="sm"
             style={{ backgroundColor: colors.primary, color: "white" }}
             className="hover:opacity-90"
           >
-            Empezar
+            Get Started
           </Button>
         </nav>
 
@@ -60,22 +64,22 @@ export function Header() {
       {open && (
         <div className="border-t md:hidden" style={{ borderColor: colors.border }}>
           <nav className="flex flex-col gap-2 p-4">
-            {["Servicios", "Precios", "FAQ", "Contacto"].map((item) => (
-              <Link
+            {["Services", "Pricing", "FAQ", "Contact"].map((item) => (
+              <a
                 key={item}
                 href={`#${item.toLowerCase()}`}
                 className="py-2 text-sm font-medium text-white/70"
                 onClick={() => setOpen(false)}
               >
                 {item}
-              </Link>
+              </a>
             ))}
             <Button
               size="sm"
               style={{ backgroundColor: colors.primary, color: "white" }}
               className="mt-2 w-full"
             >
-              Empezar
+              Get Started
             </Button>
           </nav>
         </div>

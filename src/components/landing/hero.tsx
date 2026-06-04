@@ -26,15 +26,18 @@ export function Hero() {
             style={{ borderColor: "rgba(255,255,255,0.08)", color: "rgba(255,255,255,0.5)" }}
           >
             <Sparkles className="h-4 w-4" />
-            Landing profesional en 24h
+            Professional landing in 24h
           </div>
 
-          <h1 className="text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl text-white">
+          <h1
+            className="text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl text-white"
+            style={{ fontFamily: "var(--font-space-grotesk), sans-serif" }}
+          >
             {tagline}
           </h1>
 
           <p className="mt-6 text-lg leading-8 text-white/50">
-            {businessName} — {nicho.description}. Diseñada para convertir visitantes en clientes.
+            {businessName} — {nicho.description}. Designed to convert visitors into customers.
           </p>
 
           <div className="mt-10 flex items-center justify-center gap-4">
@@ -43,7 +46,7 @@ export function Hero() {
               style={{ backgroundColor: colors.primary, color: "white" }}
               className="hover:opacity-90"
             >
-              Quiero mi landing
+              Get My Landing
               <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
             <Button
@@ -51,12 +54,12 @@ export function Hero() {
               variant="outline"
               className="border-white/10 bg-white/[0.03] text-white/70 hover:border-white/20 hover:bg-white/[0.06]"
             >
-              Ver ejemplos
+              See Examples
             </Button>
           </div>
 
           <p className="mt-4 text-sm text-white/30">
-            ⚡ Código real · Hosting incluido · Sin mensualidades
+            ⚡ Real Code · Hosting Included · No Monthly Fees
           </p>
         </div>
       </div>
