@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { nichos } from "@/data/nichos";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -23,23 +24,45 @@ import {
   Rocket,
   Layout,
   Search,
+  Utensils,
+  Briefcase,
+  Palette,
+  ShoppingBag,
+  Building2,
 } from "lucide-react";
+
+const nicheIcons: Record<string, React.ReactNode> = {
+  restaurant: <Utensils className="h-5 w-5" />,
+  professional: <Briefcase className="h-5 w-5" />,
+  startup: <Rocket className="h-5 w-5" />,
+  creative: <Palette className="h-5 w-5" />,
+  ecommerce: <ShoppingBag className="h-5 w-5" />,
+  realestate: <Building2 className="h-5 w-5" />,
+};
+
+const stats = [
+  { value: "6", label: "INDUSTRIES" },
+  { value: "24h", label: "DELIVERY" },
+  { value: "$97", label: "FROM" },
+  { value: "100%", label: "CUSTOM CODE" },
+];
 
 function HomeInner() {
   const { t } = useLang();
 
   return (
-    <div className="min-h-screen bg-[#0a0a0f] text-white selection:bg-emerald-500/30">
+    <div className="min-h-screen bg-[#07090e] text-white selection:bg-emerald-500/30">
       {/* ── Navbar ── */}
-      <header className="sticky top-0 z-50 w-full border-b border-white/[0.06] bg-[#0a0a0f]/80 backdrop-blur-xl">
+      <header className="sticky top-0 z-50 w-full border-b border-white/[0.06] bg-[#07090e]/80 backdrop-blur-xl">
         <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
           <Link href="/" className="flex items-center gap-3">
-            <img
+            <Image
               src="/landing-factory/ranuk-icon.png"
               alt="Ranuk IT"
               width={32}
               height={32}
               className="rounded-lg"
+              priority
             />
             <div className="flex flex-col">
               <span
@@ -72,7 +95,7 @@ function HomeInner() {
             <LanguageToggle />
             <Button
               size="sm"
-              className="bg-gradient-to-r from-emerald-500 to-teal-600 text-white hover:from-emerald-400 hover:to-teal-500"
+              className="bg-emerald-500 text-white hover:bg-emerald-400"
             >
               {t("nav_get_started")}
             </Button>
@@ -81,41 +104,69 @@ function HomeInner() {
           {/* Mobile */}
           <div className="flex items-center gap-3 md:hidden">
             <LanguageToggle />
+            <Button
+              size="sm"
+              className="bg-emerald-500 text-white hover:bg-emerald-400"
+            >
+              {t("nav_get_started")}
+            </Button>
           </div>
         </div>
       </header>
 
       {/* ── Hero ── */}
-      <section className="relative overflow-hidden pb-20 pt-24 sm:pt-32">
-        <div className="absolute -top-40 right-0 h-96 w-96 rounded-full bg-emerald-500 opacity-[0.07] blur-[128px]" />
-        <div className="absolute -bottom-40 left-0 h-80 w-80 rounded-full bg-teal-400 opacity-[0.05] blur-[100px]" />
+      <section className="relative overflow-hidden bg-gradient-to-b from-[#07090e] via-[#0a0f18] to-[#07090e] pb-20 pt-24 sm:pt-32">
+        {/* Radial glows */}
+        <div className="pointer-events-none absolute left-1/2 top-0 -translate-x-1/2 h-[600px] w-[800px] rounded-full bg-emerald-500 opacity-[0.06] blur-[160px]" />
+        <div className="pointer-events-none absolute -bottom-40 -left-40 h-80 w-80 rounded-full bg-teal-400 opacity-[0.04] blur-[120px]" />
+        <div className="pointer-events-none absolute -right-40 top-20 h-72 w-72 rounded-full bg-emerald-500 opacity-[0.04] blur-[100px]" />
+
+        {/* Grid pattern overlay */}
+        <div className="pointer-events-none absolute inset-0 grid-pattern-overlay opacity-[0.03]" />
 
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-4xl text-center">
-            <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.03] px-4 py-1.5 text-sm font-medium text-white/50">
-              <Sparkles className="h-4 w-4 text-emerald-400" />
-              {t("hero_badge")}
+            <div
+              className="mb-6 inline-flex items-center gap-2.5 rounded-full border border-white/10 bg-white/[0.03] px-4 py-1.5 text-sm text-white/50 animate-fade-in-up"
+              style={{ animationDelay: "0ms" }}
+            >
+              <span className="relative flex h-2 w-2">
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
+                <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-500" />
+              </span>
+              <span className="font-medium text-emerald-400/80">
+                {t("hero_badge")}
+              </span>
             </div>
 
             <h1
-              className="text-5xl font-bold tracking-tight sm:text-6xl lg:text-7xl"
-              style={{ fontFamily: "var(--font-space-grotesk), sans-serif" }}
+              className="text-5xl font-bold tracking-tight sm:text-6xl lg:text-7xl animate-fade-in-up"
+              style={{
+                fontFamily: "var(--font-space-grotesk), sans-serif",
+                animationDelay: "100ms",
+              }}
             >
               {t("hero_title_line1")}{" "}
-              <span className="bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-400 bg-clip-text text-transparent">
+              <span className="text-gradient-emerald">
                 {t("hero_title_line2")}
               </span>{" "}
               {t("hero_title_line3")}
             </h1>
 
-            <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-white/45">
+            <p
+              className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-white/45 animate-fade-in-up"
+              style={{ animationDelay: "200ms" }}
+            >
               {t("hero_subtitle")}
             </p>
 
-            <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
+            <div
+              className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row animate-fade-in-up"
+              style={{ animationDelay: "300ms" }}
+            >
               <Button
                 size="lg"
-                className="bg-gradient-to-r from-emerald-500 to-teal-600 text-white hover:from-emerald-400 hover:to-teal-500 px-8"
+                className="bg-emerald-500 text-white shadow-lg shadow-emerald-500/20 hover:bg-emerald-400 hover:scale-[1.03] transition-all duration-200 px-8"
               >
                 {t("hero_cta")}
                 <ArrowRight className="ml-2 h-4 w-4" />
@@ -129,7 +180,37 @@ function HomeInner() {
               </Button>
             </div>
 
-            <p className="mt-5 text-sm text-white/25">{t("hero_tagline")}</p>
+            <p
+              className="mt-5 text-sm text-white/25 animate-fade-in-up"
+              style={{ animationDelay: "400ms" }}
+            >
+              {t("hero_tagline")}
+            </p>
+          </div>
+
+          {/* Stats bar */}
+          <div
+            className="mx-auto mt-20 max-w-3xl animate-fade-in-up"
+            style={{ animationDelay: "500ms" }}
+          >
+            <div className="grid grid-cols-2 gap-4 sm:grid-cols-4">
+              {stats.map((stat) => (
+                <div
+                  key={stat.label}
+                  className="rounded-2xl border border-white/[0.06] bg-white/[0.02] px-6 py-5 text-center backdrop-blur-sm"
+                >
+                  <div
+                    className="text-2xl font-bold text-white"
+                    style={{ fontFamily: "var(--font-space-grotesk), sans-serif" }}
+                  >
+                    {stat.value}
+                  </div>
+                  <div className="mt-1 text-[11px] font-semibold uppercase tracking-widest text-white/30">
+                    {stat.label}
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -147,7 +228,7 @@ function HomeInner() {
             <p className="mt-4 text-lg text-white/40">{t("how_subtitle")}</p>
           </div>
 
-          <div className="mx-auto mt-16 grid max-w-4xl gap-8 sm:grid-cols-3">
+          <div className="relative mx-auto mt-16 grid max-w-4xl gap-8 sm:grid-cols-3">
             {[
               {
                 icon: <Search className="h-5 w-5" />,
@@ -167,8 +248,13 @@ function HomeInner() {
                 desc: t("how_step3_desc"),
                 num: "03",
               },
-            ].map((step) => (
-              <div key={step.num} className="relative text-center">
+            ].map((step, i, arr) => (
+              <div
+                key={step.num}
+                className={`relative text-center ${
+                  i < arr.length - 1 ? "step-connector" : ""
+                }`}
+              >
                 <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-emerald-500/10 text-emerald-400">
                   {step.icon}
                 </div>
@@ -181,7 +267,9 @@ function HomeInner() {
                 >
                   {step.title}
                 </h3>
-                <p className="mt-2 text-sm leading-relaxed text-white/40">{step.desc}</p>
+                <p className="mt-2 text-sm leading-relaxed text-white/40">
+                  {step.desc}
+                </p>
               </div>
             ))}
           </div>
@@ -204,10 +292,14 @@ function HomeInner() {
           <div className="mx-auto mt-16 grid max-w-5xl gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {nichos.map((nicho) => (
               <Link key={nicho.id} href={`/nicho/${nicho.id}`}>
-                <Card className="group h-full cursor-pointer border-white/[0.06] bg-white/[0.02] transition-all duration-300 hover:border-emerald-500/30 hover:bg-white/[0.04] hover:shadow-lg hover:shadow-emerald-500/5">
+                <Card className="gradient-border-card group h-full cursor-pointer border-white/[0.06] bg-white/[0.02] transition-all duration-300 hover:border-emerald-500/30 hover:bg-white/[0.04] hover:shadow-lg hover:shadow-emerald-500/5">
                   <CardContent className="p-6">
                     <div className="mb-4 flex items-center justify-between">
-                      <span className="text-3xl">{nicho.icon}</span>
+                      <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-emerald-500/10 text-emerald-400">
+                        {nicheIcons[nicho.id] || (
+                          <Globe className="h-5 w-5" />
+                        )}
+                      </div>
                       <Badge
                         variant="secondary"
                         className="bg-emerald-500/10 text-emerald-400 border-0"
@@ -221,7 +313,9 @@ function HomeInner() {
                     >
                       {nicho.name}
                     </h3>
-                    <p className="mt-2 text-sm text-white/40">{nicho.description}</p>
+                    <p className="mt-2 text-sm text-white/40">
+                      {nicho.description}
+                    </p>
                     <div className="mt-4 flex items-center gap-1.5 text-sm font-medium text-emerald-400 opacity-0 transition-opacity group-hover:opacity-100">
                       {t("hero_cta")}
                       <ArrowRight className="h-3.5 w-3.5" />
@@ -284,7 +378,9 @@ function HomeInner() {
                   >
                     {item.title}
                   </h3>
-                  <p className="mt-1 text-sm leading-relaxed text-white/40">{item.desc}</p>
+                  <p className="mt-1 text-sm leading-relaxed text-white/40">
+                    {item.desc}
+                  </p>
                 </div>
               </div>
             ))}
@@ -296,7 +392,7 @@ function HomeInner() {
       <section id="contact" className="py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="relative overflow-hidden rounded-3xl border border-emerald-500/20 bg-gradient-to-br from-emerald-500/10 via-teal-500/5 to-transparent p-12 text-center sm:p-16">
-            <div className="absolute -top-20 right-0 h-64 w-64 rounded-full bg-emerald-500 opacity-[0.08] blur-[100px]" />
+            <div className="pointer-events-none absolute -top-20 right-0 h-64 w-64 rounded-full bg-emerald-500 opacity-[0.08] blur-[100px]" />
             <div className="relative">
               <h2
                 className="text-3xl font-bold tracking-tight text-white sm:text-4xl"
@@ -304,10 +400,12 @@ function HomeInner() {
               >
                 {t("cta_title")}
               </h2>
-              <p className="mx-auto mt-4 max-w-xl text-lg text-white/40">{t("cta_subtitle")}</p>
+              <p className="mx-auto mt-4 max-w-xl text-lg text-white/40">
+                {t("cta_subtitle")}
+              </p>
               <Button
                 size="lg"
-                className="mt-8 bg-gradient-to-r from-emerald-500 to-teal-600 text-white hover:from-emerald-400 hover:to-teal-500 px-10"
+                className="mt-8 bg-emerald-500 text-white shadow-lg shadow-emerald-500/20 hover:bg-emerald-400 hover:scale-[1.03] transition-all duration-200 px-10"
               >
                 {t("cta_button")}
                 <ArrowRight className="ml-2 h-4 w-4" />
@@ -318,12 +416,13 @@ function HomeInner() {
       </section>
 
       {/* ── Footer ── */}
-      <footer className="border-t border-white/[0.04] bg-[#0a0a0f]">
+      <footer className="border-t border-white/[0.04] bg-[#07090e]">
         <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
           <div className="grid gap-8 sm:grid-cols-3">
+            {/* Brand */}
             <div>
               <div className="flex items-center gap-2.5">
-                <img
+                <Image
                   src="/landing-factory/ranuk-icon.png"
                   alt="Ranuk IT"
                   width={28}
@@ -342,7 +441,9 @@ function HomeInner() {
                   </span>
                 </div>
               </div>
-              <p className="mt-3 text-sm text-white/40">{t("footer_tagline")}</p>
+              <p className="mt-3 text-sm text-white/40">
+                {t("footer_tagline")}
+              </p>
               <a
                 href="https://ranuk.dev"
                 target="_blank"
@@ -354,6 +455,7 @@ function HomeInner() {
               </a>
             </div>
 
+            {/* Product */}
             <div>
               <h4 className="mb-4 text-xs font-bold uppercase tracking-widest text-white/20">
                 {t("footer_product")}
@@ -382,13 +484,17 @@ function HomeInner() {
               </ul>
             </div>
 
+            {/* Company */}
             <div>
               <h4 className="mb-4 text-xs font-bold uppercase tracking-widest text-white/20">
                 {t("footer_company")}
               </h4>
               <ul className="space-y-2 text-sm text-white/40">
                 <li>
-                  <a href="mailto:emilio@ranuk.dev" className="transition-colors hover:text-white">
+                  <a
+                    href="mailto:emilio@ranuk.dev"
+                    className="transition-colors hover:text-white"
+                  >
                     {t("nav_contact")}
                   </a>
                 </li>
@@ -409,7 +515,8 @@ function HomeInner() {
           <div className="mt-10 border-t border-white/[0.04] pt-8">
             <div className="flex flex-col items-center justify-between gap-4 sm:flex-row">
               <p className="text-xs text-white/20">
-                © {new Date().getFullYear()} Ranuk IT Solutions. All rights reserved.
+                © {new Date().getFullYear()} Ranuk IT Solutions. All rights
+                reserved.
               </p>
               <p className="text-xs text-white/15">{t("footer_built")}</p>
             </div>
