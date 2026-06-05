@@ -122,7 +122,7 @@ function HomeInner() {
         <div className="pointer-events-none absolute -right-40 top-20 h-72 w-72 rounded-full bg-emerald-500 opacity-[0.04] blur-[100px]" />
 
         {/* Grid pattern overlay */}
-        <div className="pointer-events-none absolute inset-0 grid-pattern-overlay opacity-[0.03]" />
+        <div className="pointer-events-none absolute inset-0 grid-pattern opacity-[0.03]" />
 
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-4xl text-center">
