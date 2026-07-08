@@ -57,7 +57,7 @@ function HomeInner() {
         <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
           <Link href="/" className="flex items-center gap-3">
             <Image
-              src="/ranuk-icon.png"
+              src="/landing-factory/ranuk-icon.png"
               alt="Ranuk IT"
               width={32}
               height={32}
@@ -423,7 +423,7 @@ function HomeInner() {
             <div>
               <div className="flex items-center gap-2.5">
                 <Image
-                  src="/ranuk-icon.png"
+                  src="/landing-factory/ranuk-icon.png"
                   alt="Ranuk IT"
                   width={28}
                   height={28}
