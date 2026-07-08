@@ -57,7 +57,7 @@ function HomeInner() {
         <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
           <Link href="/" className="flex items-center gap-3">
             <Image
-              src="/landing-factory/ranuk-icon.png"
+              src="/ranuk-icon.png"
               alt="Ranuk IT"
               width={32}
               height={32}
@@ -291,7 +291,7 @@ function HomeInner() {
 
           <div className="mx-auto mt-16 grid max-w-5xl gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {nichos.map((nicho) => (
-              <Link key={nicho.id} href={`/nicho/${nicho.id}`}>
+              <Link key={nicho.id} href={`/landing/${nicho.id}`}>
                 <Card className="gradient-border-card group h-full cursor-pointer border-white/[0.06] bg-white/[0.02] transition-all duration-300 hover:border-emerald-500/30 hover:bg-white/[0.04] hover:shadow-lg hover:shadow-emerald-500/5">
                   <CardContent className="p-6">
                     <div className="mb-4 flex items-center justify-between">
@@ -423,7 +423,7 @@ function HomeInner() {
             <div>
               <div className="flex items-center gap-2.5">
                 <Image
-                  src="/landing-factory/ranuk-icon.png"
+                  src="/ranuk-icon.png"
                   alt="Ranuk IT"
                   width={28}
                   height={28}
