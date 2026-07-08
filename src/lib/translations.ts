@@ -120,6 +120,16 @@ type Translations = {
   extra_domain: string;
   extra_support: string;
   extra_edits: string;
+
+  // Ranukita engine
+  ranukita_title: string;
+  ranukita_subtitle: string;
+  ranukita_c1_title: string;
+  ranukita_c1_desc: string;
+  ranukita_c2_title: string;
+  ranukita_c2_desc: string;
+  ranukita_c3_title: string;
+  ranukita_c3_desc: string;
 };
 
 export const translations: Record<Lang, Translations> = {
@@ -231,6 +241,16 @@ export const translations: Record<Lang, Translations> = {
     extra_domain: "Free .com domain",
     extra_support: "30 days support",
     extra_edits: "Unlimited edits for 15 days",
+
+    // Ranukita engine
+    ranukita_title: "Engineered by Ranukita AI",
+    ranukita_subtitle: "We combine senior European software engineering with Ranukita BOT-LLM, our autonomous agent system, to code and deploy custom landing pages in under 24 hours. No templates, no low-code limitations.",
+    ranukita_c1_title: "Agentic Design & Code",
+    ranukita_c1_desc: "Our autonomous frontend developer agent designs and codes raw React + TypeScript components. You get structured, semantic code designed to convert.",
+    ranukita_c2_title: "Semantic Memory Integration",
+    ranukita_c2_desc: "The engine processes your business context, branding rules, and tone of voice, ensuring your landing page aligns perfectly with your company's identity.",
+    ranukita_c3_title: "Automated QA & Deploy",
+    ranukita_c3_desc: "Background daemons perform automated type-checking, SEO verification, and WCAG accessibility audits before deploying directly to Vercel's edge network.",
   },
 
   es: {
@@ -341,6 +361,16 @@ export const translations: Record<Lang, Translations> = {
     extra_domain: "Dominio .com gratis",
     extra_support: "30 días de soporte",
     extra_edits: "Ediciones ilimitadas por 15 días",
+
+    // Ranukita engine
+    ranukita_title: "Tecnología: Ranukita AI Engine",
+    ranukita_subtitle: "Combinamos ingeniería de software senior con Ranukita BOT-LLM, nuestro sistema de agentes autónomos, para programar y desplegar landing pages personalizadas en menos de 24 horas. Sin plantillas, sin limitaciones de low-code.",
+    ranukita_c1_title: "Programación Agéntica",
+    ranukita_c1_desc: "Nuestro agente frontend autónomo diseña y escribe componentes limpios en React + TypeScript. Código semántico, estructurado y optimizado para conversión.",
+    ranukita_c2_title: "Memoria Semántica de Marca",
+    ranukita_c2_desc: "El motor procesa el contexto de tu negocio, reglas de marca y tono de comunicación, garantizando que el sitio se alinee con tu identidad corporativa.",
+    ranukita_c3_title: "QA & Despliegue Automatizado",
+    ranukita_c3_desc: "Daemons en segundo plano ejecutan pruebas de tipado, auditoría de accesibilidad WCAG y optimización SEO antes de subir el proyecto a la red edge de Vercel.",
   },
 
   it: {
@@ -451,5 +481,15 @@ export const translations: Record<Lang, Translations> = {
     extra_domain: "Dominio .com gratuito",
     extra_support: "30 giorni di supporto",
     extra_edits: "Modifiche illimitate per 15 giorni",
+
+    // Ranukita engine
+    ranukita_title: "Tecnologia: Ranukita AI Engine",
+    ranukita_subtitle: "Combiniamo ingegneria software senior con Ranukita BOT-LLM, il nostro sistema di agenti autonomi, per programmare e pubblicare landing page personalizzate in meno di 24 ore. Niente template, niente limiti di low-code.",
+    ranukita_c1_title: "Sviluppo Agentico",
+    ranukita_c1_desc: "Il nostro sviluppatore frontend autonomo progetta e scrive componenti React + TypeScript puliti. Codice semantico, strutturato e ottimizzato per la conversione.",
+    ranukita_c2_title: "Memoria Semantica del Brand",
+    ranukita_c2_desc: "Il motore elabora il contesto della tua attività, le linee guida del brand e il tono di voce, garantendo la perfetta coerenza con l'identità aziendale.",
+    ranukita_c3_title: "QA e Deploy Automatizzati",
+    ranukita_c3_desc: "Daemon in background eseguono verifiche di codice, audit di accessibilità WCAG e SEO on-page prima del rilascio immediato sulla rete edge di Vercel.",
   },
 };

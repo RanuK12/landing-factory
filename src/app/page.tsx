@@ -29,6 +29,9 @@ import {
   Palette,
   ShoppingBag,
   Building2,
+  Cpu,
+  Database,
+  Terminal,
 } from "lucide-react";
 
 const nicheIcons: Record<string, React.ReactNode> = {
@@ -384,6 +387,71 @@ function HomeInner() {
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Ranukita AI Integration ── */}
+      <section className="relative overflow-hidden border-t border-white/[0.04] bg-[#090b11] py-24">
+        {/* Decorative blur glows */}
+        <div className="pointer-events-none absolute left-1/4 top-1/2 -translate-y-1/2 h-[350px] w-[350px] rounded-full bg-teal-500 opacity-[0.05] blur-[100px]" />
+        <div className="pointer-events-none absolute right-1/4 top-1/3 -translate-y-1/2 h-[300px] w-[300px] rounded-full bg-emerald-500 opacity-[0.04] blur-[90px]" />
+
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-3xl text-center">
+            <Badge className="mb-4 bg-teal-500/10 text-teal-400 border border-teal-500/20 px-3 py-1 text-xs">
+              RANUKITA BOT-LLM INTEGRATION
+            </Badge>
+            <h2
+              className="text-3xl font-bold tracking-tight text-gradient-emerald sm:text-4xl"
+              style={{ fontFamily: "var(--font-space-grotesk), sans-serif" }}
+            >
+              {t("ranukita_title")}
+            </h2>
+            <p className="mx-auto mt-4 max-w-2xl text-base text-white/50 leading-relaxed">
+              {t("ranukita_subtitle")}
+            </p>
+          </div>
+
+          <div className="mx-auto mt-16 grid max-w-5xl gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {/* Card 1 */}
+            <Card className="border-white/[0.06] bg-white/[0.02] p-8 transition-all duration-300 hover:border-teal-500/30 hover:bg-white/[0.04] hover:shadow-lg hover:shadow-teal-500/5">
+              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-teal-500/10 text-teal-400 mb-6">
+                <Cpu className="h-6 w-6" />
+              </div>
+              <h3 className="text-lg font-semibold text-white mb-2" style={{ fontFamily: "var(--font-space-grotesk), sans-serif" }}>
+                {t("ranukita_c1_title")}
+              </h3>
+              <p className="text-sm text-white/40 leading-relaxed">
+                {t("ranukita_c1_desc")}
+              </p>
+            </Card>
+
+            {/* Card 2 */}
+            <Card className="border-white/[0.06] bg-white/[0.02] p-8 transition-all duration-300 hover:border-emerald-500/30 hover:bg-white/[0.04] hover:shadow-lg hover:shadow-emerald-500/5">
+              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-emerald-500/10 text-emerald-400 mb-6">
+                <Database className="h-6 w-6" />
+              </div>
+              <h3 className="text-lg font-semibold text-white mb-2" style={{ fontFamily: "var(--font-space-grotesk), sans-serif" }}>
+                {t("ranukita_c2_title")}
+              </h3>
+              <p className="text-sm text-white/40 leading-relaxed">
+                {t("ranukita_c2_desc")}
+              </p>
+            </Card>
+
+            {/* Card 3 */}
+            <Card className="border-white/[0.06] bg-white/[0.02] p-8 transition-all duration-300 hover:border-cyan-500/30 hover:bg-white/[0.04] hover:shadow-lg hover:shadow-cyan-500/5 sm:col-span-2 lg:col-span-1">
+              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-cyan-500/10 text-cyan-400 mb-6">
+                <Terminal className="h-6 w-6" />
+              </div>
+              <h3 className="text-lg font-semibold text-white mb-2" style={{ fontFamily: "var(--font-space-grotesk), sans-serif" }}>
+                {t("ranukita_c3_title")}
+              </h3>
+              <p className="text-sm text-white/40 leading-relaxed">
+                {t("ranukita_c3_desc")}
+              </p>
+            </Card>
           </div>
         </div>
       </section>
