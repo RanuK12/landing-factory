@@ -173,23 +173,6 @@ export const nichos: Nicho[] = [{
   },
 
   {
-    id: "crypto-bot",
-    name: "Crypto Trading Bot",
-    description: "Automated copy-trading bot that mirrors profitable traders on your account",
-    price: 247,
-    icon: "🤖",
-    features: [
-      "Copy professional traders",
-      "Real-time execution",
-      "Risk management controls",
-      "Multi-exchange support",
-      "Performance dashboard",
-      "Telegram alerts 24/7",
-    ],
-    colorScheme: "startup",
-  },
-
-  {
     id: "ecopulse-air",
     name: "Air Quality Monitoring",
     description: "Real-time air quality monitoring system with data visualization and alerts",
@@ -204,39 +187,5 @@ export const nichos: Nicho[] = [{
       "Mobile responsive dashboard",
     ],
     colorScheme: "professional",
-  },
-
-  {
-    id: "bot-copy-trading",
-    name: "Crypto Trading Bot",
-    description: "Automated copy-trading bot that mirrors profitable traders on your account",
-    price: 247,
-    icon: "🤖",
-    features: [
-      "Copy professional traders",
-      "Real-time execution",
-      "Risk management controls",
-      "Multi-exchange support",
-      "Performance dashboard",
-      "Telegram alerts 24/7",
-    ],
-    colorScheme: "startup",
-  },
-
-  {
-    id: "bot-copy-trading",
-    name: "Crypto Trading Bot",
-    description: "Automated copy-trading bot that mirrors profitable traders on your account",
-    price: 247,
-    icon: "🤖",
-    features: [
-      "Copy professional traders",
-      "Real-time execution",
-      "Risk management controls",
-      "Multi-exchange support",
-      "Performance dashboard",
-      "Telegram alerts 24/7",
-    ],
-    colorScheme: "startup",
   }
 ];
