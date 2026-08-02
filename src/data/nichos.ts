@@ -75,8 +75,7 @@ export const colorSchemes: Record<string, ColorScheme> = {
   },
 };
 
-export const nichos: Nicho[] = [
-  {
+export const nichos: Nicho[] = [{
     id: "restaurant",
     name: "Restaurants",
     description: "Landing with menu, gallery, reservations and location",
@@ -121,6 +120,22 @@ export const nichos: Nicho[] = [
       "Demo / Video embed",
       "Analytics ready",
       "Dark mode included",
+    ],
+    colorScheme: "startup",
+  },
+  {
+    id: "crypto-bot",
+    name: "Crypto Trading Bot",
+    description: "Automated copy-trading bot that mirrors profitable traders on your account",
+    price: 247,
+    icon: "🤖",
+    features: [
+      "Copy professional traders",
+      "Real-time execution",
+      "Risk management controls",
+      "Multi-exchange support",
+      "Performance dashboard",
+      "Telegram alerts 24/7",
     ],
     colorScheme: "startup",
   },
@@ -172,4 +187,21 @@ export const nichos: Nicho[] = [
     ],
     colorScheme: "realestate",
   },
+
+  {
+    id: "ecopulse-air",
+    name: "Air Quality Monitoring",
+    description: "Real-time air quality monitoring system with data visualization and alerts",
+    price: 347,
+    icon: "🌬️",
+    features: [
+      "Real-time air quality data",
+      "Interactive maps and charts",
+      "SMS/email alerts",
+      "Historical data analysis",
+      "API for third-party integration",
+      "Mobile responsive dashboard",
+    ],
+    colorScheme: "professional",
+  }
 ];
