@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Sparkles } from "lucide-react";
 
 export function Hero() {
-  const { businessName, colors, nicho } = useTheme();
+  const { businessName, tagline, colors, nicho } = useTheme();
   const { t } = useLang();
 
   return (
