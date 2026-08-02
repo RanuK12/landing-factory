@@ -187,5 +187,22 @@ export const nichos: Nicho[] = [{
       "Telegram alerts 24/7",
     ],
     colorScheme: "startup",
+  },
+
+  {
+    id: "ecopulse-air",
+    name: "Air Quality Monitoring",
+    description: "Real-time air quality monitoring system with data visualization and alerts",
+    price: 347,
+    icon: "🌬️",
+    features: [
+      "Real-time air quality data",
+      "Interactive maps and charts",
+      "SMS/email alerts",
+      "Historical data analysis",
+      "API for third-party integration",
+      "Mobile responsive dashboard",
+    ],
+    colorScheme: "professional",
   }
 ];
