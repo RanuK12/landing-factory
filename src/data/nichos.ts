@@ -75,8 +75,7 @@ export const colorSchemes: Record<string, ColorScheme> = {
   },
 };
 
-export const nichos: Nicho[] = [
-  {
+export const nichos: Nicho[] = [{
     id: "restaurant",
     name: "Restaurants",
     description: "Landing with menu, gallery, reservations and location",
@@ -172,4 +171,21 @@ export const nichos: Nicho[] = [
     ],
     colorScheme: "realestate",
   },
+
+  {
+    id: "crypto-bot",
+    name: "Crypto Trading Bot",
+    description: "Automated copy-trading bot that mirrors profitable traders on your account",
+    price: 247,
+    icon: "🤖",
+    features: [
+      "Copy professional traders",
+      "Real-time execution",
+      "Risk management controls",
+      "Multi-exchange support",
+      "Performance dashboard",
+      "Telegram alerts 24/7",
+    ],
+    colorScheme: "startup",
+  }
 ];
