@@ -124,6 +124,22 @@ export const nichos: Nicho[] = [{
     colorScheme: "startup",
   },
   {
+    id: "crypto-bot",
+    name: "Crypto Trading Bot",
+    description: "Automated copy-trading bot that mirrors profitable traders on your account",
+    price: 247,
+    icon: "🤖",
+    features: [
+      "Copy professional traders",
+      "Real-time execution",
+      "Risk management controls",
+      "Multi-exchange support",
+      "Performance dashboard",
+      "Telegram alerts 24/7",
+    ],
+    colorScheme: "startup",
+  },
+  {
     id: "creative",
     name: "Creatives / Portfolio",
     description: "Gallery landing with portfolio and bio",
