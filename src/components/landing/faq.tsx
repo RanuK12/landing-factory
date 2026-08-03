@@ -1,21 +1,16 @@
 "use client";
 
 import { useState } from "react";
+import { useTheme } from "./theme-provider";
 import { useLang } from "@/components/language-provider";
 import { ChevronDown } from "lucide-react";
 
 export function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
+  const { getFaqs } = useTheme();
   const { t } = useLang();
 
-  const faqs = [
-    { q: t("faq_1_q"), a: t("faq_1_a") },
-    { q: t("faq_2_q"), a: t("faq_2_a") },
-    { q: t("faq_3_q"), a: t("faq_3_a") },
-    { q: t("faq_4_q"), a: t("faq_4_a") },
-    { q: t("faq_5_q"), a: t("faq_5_a") },
-    { q: t("faq_6_q"), a: t("faq_6_a") },
-  ];
+  const faqs = getFaqs();
 
   return (
     <section id="faq" className="border-y border-white/[0.04] bg-white/[0.01] py-24">

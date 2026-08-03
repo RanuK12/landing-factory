@@ -6,8 +6,10 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Check } from "lucide-react";
 
 export function Features() {
-  const { nicho } = useTheme();
+  const { getFeatures } = useTheme();
   const { t } = useLang();
+
+  const features = getFeatures();
 
   return (
     <section id="services" className="border-y border-white/[0.04] bg-white/[0.01] py-24">
@@ -25,7 +27,7 @@ export function Features() {
         </div>
 
         <div className="mt-16 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {nicho.features.map((feature, i) => (
+          {features.map((feature, i) => (
             <Card
               key={i}
               className="border-white/[0.06] bg-white/[0.02] transition-all hover:border-white/[0.12] hover:bg-white/[0.04]"
