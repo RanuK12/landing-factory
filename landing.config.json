@@ -1,20 +1,20 @@
 {
-  "businessName": "Bot Copy Trading Ranuk",
-  "tagline": "El bot que copia traders rentables y ejecuta en tu cuenta automáticamente",
+  "businessName": "EcoPulse Air",
+  "tagline": "Monitoreo ambiental en tiempo real con datos precisos y alertas inteligentes",
   "nicho": {
-    "id": "bot-copy-trading",
-    "name": "Crypto Trading Bot",
-    "description": "Automated copy-trading bot that mirrors profitable traders on your account",
-    "price": 247,
-    "icon": "🤖",
+    "id": "ecopulse-air",
+    "name": "Environmental Monitoring",
+    "description": "Plataforma de inteligencia ambiental con datos en tiempo real de calidad del aire, meteorología y contaminantes",
+    "price": 149,
+    "icon": "🌿",
     "features": [
-      "Copy professional traders",
-      "Real-time execution",
-      "Risk management controls",
-      "Multi-exchange support",
-      "Performance dashboard",
-      "Telegram alerts 24/7"
+      "Datos en tiempo real de calidad del aire",
+      "Monitoreo de contaminantes peligrosos",
+      "Alertas inteligentes por umbrales personalizados",
+      "Historial y tendencias de calidad ambiental",
+      "API integrable para aplicaciones propias",
+      "Reportes mensuales y anuales"
     ],
-    "colorScheme": "startup"
+    "colorScheme": "professional"
   }
 }
