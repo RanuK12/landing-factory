@@ -16,5 +16,56 @@
       "Reportes mensuales y anuales"
     ],
     "colorScheme": "professional"
-  }
+  },
+  "features": [
+    "Datos en tiempo real de calidad del aire",
+    "Monitoreo de contaminantes peligrosos",
+    "Alertas inteligentes por umbrales personalizados",
+    "Historial y tendencias de calidad ambiental",
+    "API integrable para aplicaciones propias",
+    "Reportes mensuales y anuales"
+  ],
+  "pricingExtras": [
+    "Optimización SEO incluida",
+    "Blog integrado",
+    "Formulario de contacto inteligente",
+    "Integración con redes sociales",
+    "Hosting de alto rendimiento",
+    "Dominio personalizado",
+    "Soporte prioritario 24/7",
+    "Ediciones ilimitadas por 30 días"
+  ],
+  "faqs": [
+    {
+      "q": "¿Cómo obtengo los datos en tiempo real?",
+      "a": "Nuestra plataforma se conecta a sensores IoT y APIs meteorológicas para ofrecer datos actualizados cada 5 minutos."
+    },
+    {
+      "q": "¿Puedo personalizar las alertas?",
+      "a": "Sí, puedes definir umbrales para cada contaminante y recibir notificaciones por email o WhatsApp."
+    },
+    {
+      "q": "¿Ofrecen integración con otras herramientas?",
+      "a": "Contamos con una API REST documentada que permite integrar los datos en tus propias aplicaciones o dashboards."
+    },
+    {
+      "q": "¿Qué incluye el precio único?",
+      "a": "Incluye la landing completa, hosting, dominio, SEO, formulario de contacto y soporte prioritario."
+    },
+    {
+      "q": "¿Puedo solicitar cambios después de la entrega?",
+      "a": "Sí, ofrecemos ediciones ilimitadas durante los primeros 30 días sin costo adicional."
+    },
+    {
+      "q": "¿Cómo se gestiona el dominio?",
+      "a": "Nos encargamos de la compra y configuración del dominio, así como de la renovación anual."
+    }
+  ],
+  "contact": {
+    "email": "emilio@ranuk.dev",
+    "phone": "+393445721753",
+    "whatsApp": "+393445721753"
+  },
+  "primaryColor": "#10b981",
+  "accentColor": "#14b8a6"
 }

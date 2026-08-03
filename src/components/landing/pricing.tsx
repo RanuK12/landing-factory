@@ -8,19 +8,10 @@ import { Badge } from "@/components/ui/badge";
 import { Check } from "lucide-react";
 
 export function Pricing() {
-  const { nicho } = useTheme();
+  const { nicho, getPricingExtras } = useTheme();
   const { t } = useLang();
 
-  const extras = [
-    t("extra_seo"),
-    t("extra_blog"),
-    t("extra_form"),
-    t("extra_social"),
-    t("extra_hosting"),
-    t("extra_domain"),
-    t("extra_support"),
-    t("extra_edits"),
-  ];
+  const extras = getPricingExtras();
 
   return (
     <section id="pricing" className="py-24">

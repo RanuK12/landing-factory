@@ -38,6 +38,7 @@ export default async function NichoPage({ params }: { params: Promise<{ nicho: s
       nicho={nicho}
       businessName={businessName}
       tagline={tagline}
+      customConfig={customConfig}
     />
   );
 }

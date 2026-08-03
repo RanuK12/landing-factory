@@ -15,12 +15,14 @@ interface LandingPageProps {
   nicho: Nicho;
   businessName?: string;
   tagline?: string;
+  customConfig?: any;
 }
 
 export function LandingPage({
   nicho,
   businessName = "Your Business",
   tagline = "Your Professional Web Presence",
+  customConfig = null,
 }: LandingPageProps) {
   const colors = colorSchemes[nicho.colorScheme];
 
@@ -31,6 +33,7 @@ export function LandingPage({
         colors={colors}
         businessName={businessName}
         tagline={tagline}
+        customConfig={customConfig}
       >
         <div className="min-h-screen bg-[#0a0a0f] text-white">
           <Header />

@@ -5,8 +5,10 @@ import { useLang } from "@/components/language-provider";
 import { ExternalLink } from "lucide-react";
 
 export function Footer() {
-  const { businessName } = useTheme();
+  const { businessName, getContactEmail } = useTheme();
   const { t } = useLang();
+
+  const email = getContactEmail();
 
   return (
     <footer className="bg-[#0a0a0f]">
@@ -79,7 +81,7 @@ export function Footer() {
             </h4>
             <ul className="space-y-2 text-sm text-white/40">
               <li>
-                <a href="mailto:emilio@ranuk.dev" className="transition-colors hover:text-white">
+                <a href={`mailto:${email}`} className="transition-colors hover:text-white">
                   {t("nav_contact")}
                 </a>
               </li>

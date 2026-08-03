@@ -8,8 +8,12 @@ import { Textarea } from "@/components/ui/textarea";
 import { Send, Mail, MessageCircle } from "lucide-react";
 
 export function Contact() {
-  const { businessName } = useTheme();
+  const { businessName, getContactEmail, getContactPhone, getContactWhatsApp } = useTheme();
   const { t } = useLang();
+
+  const email = getContactEmail();
+  const phone = getContactPhone();
+  const whatsApp = getContactWhatsApp();
 
   return (
     <section id="contact" className="py-24">
@@ -62,14 +66,23 @@ export function Contact() {
 
           <div className="mt-8 flex items-center justify-center gap-6">
             <a
-              href="mailto:emilio@ranuk.dev"
+              href={`mailto:${email}`}
               className="flex items-center gap-2 text-sm font-medium text-emerald-400/70 transition-colors hover:text-emerald-400"
             >
               <Mail className="h-4 w-4" />
-              emilio@ranuk.dev
+              {email}
             </a>
+            {phone && (
+              <a
+                href={`tel:${phone}`}
+                className="flex items-center gap-2 text-sm font-medium text-emerald-400/70 transition-colors hover:text-emerald-400"
+              >
+                <MessageCircle className="h-4 w-4" />
+                {phone}
+              </a>
+            )}
             <a
-              href="https://wa.me/393445721753"
+              href={`https://wa.me/${whatsApp.replace(/\D/g, "")}`}
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 text-sm font-medium text-emerald-400/70 transition-colors hover:text-emerald-400"
