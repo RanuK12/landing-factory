@@ -1,64 +1,64 @@
 {
-  "businessName": "EcoPulse Air",
-  "tagline": "Monitoreo ambiental en tiempo real con datos precisos y alertas inteligentes",
+  "businessName": "CarbonLoop AI",
+  "tagline": "Calculá, reducí y compensá tu huella de carbono en minutos. La plataforma de sostenibilidad para PYMEs.",
   "nicho": {
     "id": "ecopulse-air",
-    "name": "Environmental Monitoring",
-    "description": "Plataforma de inteligencia ambiental con datos en tiempo real de calidad del aire, meteorología y contaminantes",
-    "price": 149,
-    "icon": "🌿",
+    "name": "Carbon Footprint",
+    "description": "Plataforma de huella de carbono para PYMEs: medí emisiones, recibí recomendaciones y compensá con proyectos verificados.",
+    "price": 197,
+    "icon": "🌱",
     "features": [
-      "Datos en tiempo real de calidad del aire",
-      "Monitoreo de contaminantes peligrosos",
-      "Alertas inteligentes por umbrales personalizados",
-      "Historial y tendencias de calidad ambiental",
-      "API integrable para aplicaciones propias",
-      "Reportes mensuales y anuales"
+      "Cálculo automático de huella de carbono",
+      "Recomendaciones personalizadas con IA",
+      "Compensación con proyectos verificados",
+      "Dashboard de métricas en tiempo real",
+      "Reportes descargables para auditorías",
+      "Sello de sostenibilidad verificable"
     ],
     "colorScheme": "professional"
   },
   "features": [
-    "Datos en tiempo real de calidad del aire",
-    "Monitoreo de contaminantes peligrosos",
-    "Alertas inteligentes por umbrales personalizados",
-    "Historial y tendencias de calidad ambiental",
-    "API integrable para aplicaciones propias",
-    "Reportes mensuales y anuales"
+    "Cálculo automático de huella de carbono en 3 pasos",
+    "Recomendaciones de reducción con IA generativa",
+    "Compensación con proyectos verificados (VCS, Gold Standard)",
+    "Dashboard de métricas y tendencias en tiempo real",
+    "Reportes descargables listos para auditorías ISO 14064",
+    "Sello de sostenibilidad verificable para tu web"
   ],
   "pricingExtras": [
-    "Optimización SEO incluida",
-    "Blog integrado",
-    "Formulario de contacto inteligente",
-    "Integración con redes sociales",
-    "Hosting de alto rendimiento",
-    "Dominio personalizado",
+    "Cálculo ilimitado de emisiones",
+    "Recomendaciones de IA personalizadas",
+    "Dashboard con métricas en tiempo real",
+    "Reportes exportables (PDF, CSV)",
+    "Sello de sostenibilidad verificable",
+    "Integración con API",
     "Soporte prioritario 24/7",
-    "Ediciones ilimitadas por 30 días"
+    "30 días de prueba gratis"
   ],
   "faqs": [
     {
-      "q": "¿Cómo obtengo los datos en tiempo real?",
-      "a": "Nuestra plataforma se conecta a sensores IoT y APIs meteorológicas para ofrecer datos actualizados cada 5 minutos."
+      "q": "¿Cómo calcula CarbonLoop mi huella de carbono?",
+      "a": "Nuestra IA analiza tus datos operativos (energía, transporte, residuos, compras) usando metodologías GHG Protocol y factores de emisión actualizados."
     },
     {
-      "q": "¿Puedo personalizar las alertas?",
-      "a": "Sí, puedes definir umbrales para cada contaminante y recibir notificaciones por email o WhatsApp."
+      "q": "¿Qué tan precisos son los cálculos?",
+      "a": "Usamos factores de emisión verificados por DEFRA, EPA y IPCC. La precisión depende de la calidad de tus datos, pero nuestro modelo compensa estimaciones con machine learning."
     },
     {
-      "q": "¿Ofrecen integración con otras herramientas?",
-      "a": "Contamos con una API REST documentada que permite integrar los datos en tus propias aplicaciones o dashboards."
+      "q": "¿Cómo funciona la compensación de carbono?",
+      "a": "Te conectamos con proyectos certificados (VCS, Gold Standard) de reforestación, energías renovables y captura de metano. Elegís el proyecto y nosotros gestionamos la compra de créditos."
     },
     {
-      "q": "¿Qué incluye el precio único?",
-      "a": "Incluye la landing completa, hosting, dominio, SEO, formulario de contacto y soporte prioritario."
+      "q": "¿Mis datos están seguros?",
+      "a": "Sí, usamos encriptación AES-256, servidores en Europa (GDPR compliant) y nunca compartimos tus datos sin permiso explícito."
     },
     {
-      "q": "¿Puedo solicitar cambios después de la entrega?",
-      "a": "Sí, ofrecemos ediciones ilimitadas durante los primeros 30 días sin costo adicional."
+      "q": "¿Puedo integrar CarbonLoop con mis sistemas actuales?",
+      "a": "Sí, ofrecemos API REST y conectores para ERPs como SAP, Oracle y Microsoft Dynamics."
     },
     {
-      "q": "¿Cómo se gestiona el dominio?",
-      "a": "Nos encargamos de la compra y configuración del dominio, así como de la renovación anual."
+      "q": "¿Qué incluye el precio?",
+      "a": "Incluye cálculo ilimitado, dashboard completo, reportes exportables, sello de sostenibilidad, integración API y soporte prioritario. 30 días de prueba gratis."
     }
   ],
   "contact": {
@@ -66,6 +66,6 @@
     "phone": "+393445721753",
     "whatsApp": "+393445721753"
   },
-  "primaryColor": "#10b981",
-  "accentColor": "#14b8a6"
+  "primaryColor": "#22c55e",
+  "accentColor": "#10b981"
 }
