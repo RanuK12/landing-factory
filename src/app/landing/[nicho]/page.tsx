@@ -30,12 +30,18 @@ export default async function NichoPage({ params }: { params: Promise<{ nicho: s
 
   // Check if we have custom config
   const customConfig = getCustomConfig();
-  const businessName = customConfig?.businessName || `${nicho.name} Pro`;
-  const tagline = customConfig?.tagline || `La mejor landing para ${nicho.name.toLowerCase()}`;
+
+  // Merge JSON nicho overrides into the hardcoded nicho
+  const mergedNicho = customConfig?.nicho
+    ? { ...nicho, ...customConfig.nicho }
+    : nicho;
+
+  const businessName = customConfig?.businessName || `${mergedNicho.name} Pro`;
+  const tagline = customConfig?.tagline || `La mejor landing para ${mergedNicho.name.toLowerCase()}`;
 
   return (
     <LandingPage
-      nicho={nicho}
+      nicho={mergedNicho}
       businessName={businessName}
       tagline={tagline}
       customConfig={customConfig}

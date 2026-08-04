@@ -35,6 +35,9 @@ export function ThemeProvider({
   customConfig?: any;
 }) {
   const getFeatures = (): string[] => {
+    if (customConfig?.nicho?.features && Array.isArray(customConfig.nicho.features)) {
+      return customConfig.nicho.features;
+    }
     if (customConfig?.features && Array.isArray(customConfig.features)) {
       return customConfig.features;
     }
