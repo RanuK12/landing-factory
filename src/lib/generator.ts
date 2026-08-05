@@ -1,4 +1,4 @@
-import { landingConfig } from '@/../landing.config';
+import landingConfig from '@/../landing.config.json';
 
 export interface LandingSection {
   id: string;

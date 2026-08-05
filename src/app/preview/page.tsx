@@ -26,7 +26,7 @@ export default function PreviewPage() {
     // Import the landing config dynamically
     const config = await import('@/../landing.config.json');
     // Update the nicho based on selection
-    config.nicho = nichos.find(n => n.id === selectedNicho);
+    config.nicho = nichos.find(n => n.id === selectedNicho)!;
     
     setSections(generateLandingSections());
     setIsGenerating(false);
