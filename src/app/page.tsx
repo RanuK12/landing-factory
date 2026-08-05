@@ -8,6 +8,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { LanguageProvider, useLang } from "@/components/language-provider";
 import { LanguageToggle } from "@/components/language-toggle";
+import { Navigation } from "@/components/navigation";
 import {
   ArrowRight,
   Sparkles,
