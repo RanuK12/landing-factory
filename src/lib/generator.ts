@@ -26,7 +26,7 @@ export const generateLandingSections = (): LandingSection[] => {
       type: 'features',
       title: 'Características',
       content: 'Descubre todo lo que nuestra plataforma puede ofrecerte',
-      items: landingConfig.features,
+      items: landingConfig.features as string[],
     });
   }
   
@@ -40,7 +40,7 @@ export const generateLandingSections = (): LandingSection[] => {
       items: [{
         name: landingConfig.nicho.name,
         price: `$${landingConfig.nicho.price}`,
-        features: landingConfig.nicho.features,
+        features: landingConfig.nicho.features as string[],
       }],
     });
   }

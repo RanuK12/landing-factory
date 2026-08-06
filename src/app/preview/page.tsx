@@ -7,16 +7,29 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { nichos } from '@/data/nichos';
-import { ArrowRight, Download, Eye } from 'lucide-react';
+import { Download } from 'lucide-react';
+
+interface Nicho {
+  id: string;
+  name: string;
+  description: string;
+  price: number;
+  features: string[];
+  icon: string;
+}
+
+interface LandingSection {
+  id: string;
+  type: 'hero' | 'features' | 'pricing' | 'faq' | 'contact';
+  title?: string;
+  content?: string;
+  items?: any[];
+}
 
 export default function PreviewPage() {
   const [selectedNicho, setSelectedNicho] = useState<string>('ecopulse-air');
-  const [sections, setSections] = useState<any[]>([]);
+  const [sections, setSections] = useState<LandingSection[]>([]);
   const [isGenerating, setIsGenerating] = useState(false);
-
-  useEffect(() => {
-    generatePreview();
-  }, [selectedNicho]);
 
   const generatePreview = async () => {
     setIsGenerating(true);
@@ -26,12 +39,16 @@ export default function PreviewPage() {
     // Import the landing config dynamically
     const config = await import('@/../landing.config.json');
     // Update the nicho based on selection
-    config.nicho = nichos.find(n => n.id === selectedNicho)!;
+    config.nicho = nichos.find((n: Nicho) => n.id === selectedNicho)!;
     
     setSections(generateLandingSections());
     setIsGenerating(false);
   };
 
+  useEffect(() => {
+    generatePreview();
+  }, [selectedNicho]);
+  
   const exportLanding = () => {
     // Create a simple HTML export of the landing
     const htmlContent = `
@@ -58,13 +75,13 @@ export default function PreviewPage() {
       <body>
         <div class="container">
           <div class="hero">
-            <h1>${nichos.find(n => n.id === selectedNicho)?.name}</h1>
-            <p>${nichos.find(n => n.id === selectedNicho)?.description}</p>
+            <h1>${nichos.find((n: Nicho) => n.id === selectedNicho)?.name}</h1>
+            <p>${nichos.find((n: Nicho) => n.id === selectedNicho)?.description}</p>
           </div>
           
           <div class="section features">
             <h2>Características</h2>
-            ${nichos.find(n => n.id === selectedNicho)?.features.map(f => `
+            ${nichos.find((n: Nicho) => n.id === selectedNicho)?.features.map(f => `
               <div class="feature-item">
                 <i>✓</i>
                 <span>${f}</span>
@@ -75,8 +92,8 @@ export default function PreviewPage() {
           <div class="section pricing">
             <h2>Precios</h2>
             <div class="card">
-              <h3>${nichos.find(n => n.id === selectedNicho)?.name}</h3>
-              <p><strong>$${nichos.find(n => n.id === selectedNicho)?.price}</strong></p>
+              <h3>${nichos.find((n: Nicho) => n.id === selectedNicho)?.name}</h3>
+              <p><strong>$${nichos.find((n: Nicho) => n.id === selectedNicho)?.price}</strong></p>
               <p>por mes</p>
               <button style="background: #007bff; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer;">Comenzar Ahora</button>
             </div>
