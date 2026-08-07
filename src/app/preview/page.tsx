@@ -28,6 +28,7 @@ export default function PreviewPage() {
     // Update the nicho based on selection
     config.nicho = nichos.find(n => n.id === selectedNicho)!;
     
+    // Generate sections with the selected config
     setSections(generateLandingSections());
     setIsGenerating(false);
   };
@@ -161,7 +162,11 @@ export default function PreviewPage() {
         ) : (
           <div className="bg-white rounded-lg shadow-lg overflow-hidden">
             {sections.map((section) => (
-              <LandingSectionComponent key={section.id} section={section} />
+              <LandingSectionComponent 
+                key={section.id} 
+                section={section} 
+                colorScheme={section.colorScheme}
+              />
             ))}
           </div>
         )}
