@@ -23,7 +23,7 @@ export default function TestCryptoBotPage() {
     await new Promise(resolve => setTimeout(resolve, 1000));
     
     // Generate sections with the crypto bot config
-    const cryptoSections = generateLandingSections('../crypto-bot-config.json');
+    const cryptoSections = generateLandingSections('./crypto-bot-config.json');
     setSections(cryptoSections);
     setIsGenerating(false);
   };
