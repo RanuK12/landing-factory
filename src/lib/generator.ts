@@ -22,40 +22,9 @@ export const generateLandingSections = (configPath?: string): LandingSection[] =
       // This is a simplified implementation - in production you'd want
       // proper dynamic imports or a config management system
       if (configPath.includes('crypto-bot')) {
-        // For demo purposes, we'll modify the default config
-        config = {
-          ...landingConfig,
-          businessName: "CryptoCopyTrading",
-          tagline: "Automated crypto trading bot that mirrors profitable traders on your account",
-          primaryColor: "#7c3aed",
-          accentColor: "#a855f7",
-          nicho: {
-            id: "crypto-bot",
-            name: "Crypto Trading Bot",
-            description: "Automated copy-trading bot that mirrors profitable traders on your account",
-            price: 247,
-            icon: "🤖",
-            features: [
-              "Copy professional traders",
-              "Real-time execution",
-              "Risk management controls",
-              "Multi-exchange support",
-              "Performance dashboard",
-              "Telegram alerts 24/7"
-            ],
-            colorScheme: "startup"
-          },
-          features: [
-            "Copy professional traders automatically",
-            "Real-time trade execution",
-            "Advanced risk management controls",
-            "Multi-exchange support (Binance, Coinbase, Kraken)",
-            "Performance analytics dashboard",
-            "24/7 Telegram notifications",
-            "Customizable copying parameters",
-            "Stop-loss and take-profit automation"
-          ]
-        };
+        // Import the crypto bot config
+        const cryptoConfig = require('../../crypto-bot-config.json');
+        config = cryptoConfig;
       }
     } catch (error) {
       console.warn(`Failed to load config from ${configPath}:`, error);
