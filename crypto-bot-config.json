@@ -1,74 +1,74 @@
 {
   "businessName": "CryptoCopyTrading",
-  "tagline": "Automated crypto trading bot that mirrors profitable traders on your account",
+  "tagline": "Bot de trading automático que replica las estrategias de los traders más rentables",
+  "sections": ["hero", "features", "pricing", "faq", "contact"],
   "nicho": {
     "id": "crypto-bot",
     "name": "Crypto Trading Bot",
-    "description": "Automated copy-trading bot that mirrors profitable traders on your account",
+    "description": "Bot de trading cripto automático que replica las estrategias de traders rentables",
     "price": 247,
     "icon": "🤖",
     "features": [
-      "Copy professional traders",
-      "Real-time execution",
-      "Risk management controls",
-      "Multi-exchange support",
-      "Performance dashboard",
-      "Telegram alerts 24/7"
+      "Copy de traders profesionales automáticamente",
+      "Ejecución de trades en tiempo real",
+      "Controles avanzados de gestión de riesgos",
+      "Soporte multi-exchange",
+      "Dashboard de análisis de performance",
+      "Notificaciones 24/7 por Telegram"
     ],
-    "colorScheme": "startup"
+    "colorScheme": "tech"
   },
   "features": [
-    "Copy professional traders automatically",
-    "Real-time trade execution",
-    "Advanced risk management controls",
-    "Multi-exchange support (Binance, Coinbase, Kraken)",
-    "Performance analytics dashboard",
-    "24/7 Telegram notifications",
-    "Customizable copying parameters",
-    "Stop-loss and take-profit automation"
+    "Copy de traders profesionales en tiempo real",
+    "Ejecución automática de trades",
+    "Gestión de riesgos configurable",
+    "Soporte para múltiples exchanges",
+    "Dashboard con métricas de performance",
+    "Alertas y notificaciones por Telegram",
+    "Backtesting con datos históricos",
+    "API para integración con otros sistemas"
   ],
   "pricingExtras": [
-    "Unlimited trader copying",
-    "Real-time execution on all supported exchanges",
-    "Advanced risk management tools",
-    "Multi-exchange portfolio management",
-    "Detailed performance analytics",
-    "24/7 Telegram alerts and notifications",
-    "Customizable copying parameters",
-    "API access for third-party integrations",
-    "Priority support 24/7",
-    "30-day money-back guarantee"
+    "Acceso ilimitado a traders",
+    "Backtesting con datos históricos",
+    "Dashboard de performance en tiempo real",
+    "Notificaciones 24/7 por Telegram",
+    "Soporte multi-exchange",
+    "API para integración",
+    "Actualizaciones automáticas",
+    "Soporte prioritario 24/7",
+    "30 días de prueba gratis"
   ],
   "faqs": [
     {
-      "q": "How does the copy trading work?",
-      "a": "Our AI analyzes trader performance and automatically copies their trades proportionally to your account size. You set risk parameters and the bot handles the execution."
+      "q": "¿Cómo funciona el copy trading?",
+      "a": "Nuestro bot analiza el performance de traders profesionales y replica automáticamente sus estrategias en tu cuenta con ajustes de riesgo personalizados."
     },
     {
-      "q": "Which exchanges are supported?",
-      "a": "We support Binance, Coinbase, Kraken, and other major exchanges. More are added based on user demand and market stability."
+      "q": "¿Qué exchanges soportan?",
+      "a": "Soportamos los principales exchanges: Binance, Coinbase Pro, Kraken, Bybit, KuCoin y 10+ más. Puedes conectar múltiples exchanges simultáneamente."
     },
     {
-      "q": "How much can I earn?",
-      "a": "Results vary based on the traders you copy and market conditions. Our average users see 15-30% monthly returns, but past performance doesn't guarantee future results."
+      "q": "¿Cómo gestionan el riesgo?",
+      "a": "Implementamos múltiples capas de seguridad: stop-loss automáticos, diversificación de portafolio, límites diarios y configuración de riesgo por trade."
     },
     {
-      "q": "Is my money safe?",
-      "a": "Yes, we use API keys with read-only access for portfolio tracking and trade execution only. We never have access to your funds or withdrawal permissions."
+      "q": "¿Mis fondos están seguros?",
+      "a": "Sí, usamos APIs oficiales de los exchanges, nunca tenemos acceso a tus fondos. Solo podemos ejecutar trades con los permisos que tú configuras."
     },
     {
-      "q": "Can I control my own trades?",
-      "a": "Absolutely! You can override any copied trade, set your own parameters, or pause copying at any time through our dashboard."
+      "q": "¿Puedo personalizar las estrategias?",
+      "a": "Sí, puedes ajustar parámetros como porcentaje de riesgo, trades simultáneos, selección de traders específicos y horarios de trading."
     },
     {
-      "q": "What's included in the price?",
-      "a": "Full access to all features, unlimited trader copying, 24/7 support, API access, and all future updates. 30-day money-back guarantee included."
+      "q": "¿Qué incluye el precio?",
+      "a": "Incluye acceso ilimitado a traders, dashboard completo, API, soporte multi-exchange, notificaciones 24/7 y 30 días de prueba gratis. Sin comisiones ocultas."
     }
   ],
   "contact": {
-    "email": "support@cryptocopytrading.com",
-    "phone": "+1 555 0123",
-    "whatsApp": "+1 555 0123"
+    "email": "emilio@ranuk.dev",
+    "phone": "+393445721753",
+    "whatsApp": "+393445721753"
   },
   "primaryColor": "#7c3aed",
   "accentColor": "#a855f7"

@@ -14,10 +14,6 @@ export default function PreviewPage() {
   const [sections, setSections] = useState<any[]>([]);
   const [isGenerating, setIsGenerating] = useState(false);
 
-  useEffect(() => {
-    generatePreview();
-  }, [selectedNicho]);
-
   const generatePreview = async () => {
     setIsGenerating(true);
     // Simulate loading delay
@@ -32,6 +28,10 @@ export default function PreviewPage() {
     setSections(generateLandingSections());
     setIsGenerating(false);
   };
+
+  useEffect(() => {
+    generatePreview();
+  }, [selectedNicho]);
 
   const exportLanding = () => {
     // Create a simple HTML export of the landing

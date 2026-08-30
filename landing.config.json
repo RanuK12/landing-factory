@@ -1,6 +1,7 @@
 {
   "businessName": "CarbonLoop AI",
   "tagline": "Calculá, reducí y compensá tu huella de carbono en minutos. La plataforma de sostenibilidad para PYMEs.",
+  "sections": ["hero", "features", "faq", "pricing", "contact"],
   "nicho": {
     "id": "ecopulse-air",
     "name": "Carbon Footprint",

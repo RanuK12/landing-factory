@@ -1,15 +1,15 @@
 "use client";
 
 import { useState, useEffect } from 'react';
-import { generateLandingSections } from '@/lib/generator';
+import { generateLandingSections, LandingSection } from '@/lib/generator';
 import { LandingSectionComponent } from '@/components/landing-section';
 import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { ArrowRight, Download, Eye, Check } from 'lucide-react';
+import { Download } from 'lucide-react';
+
+
 
 export default function TestCryptoBotPage() {
-  const [sections, setSections] = useState<any[]>([]);
+  const [sections, setSections] = useState<LandingSection[]>([]);
   const [isGenerating, setIsGenerating] = useState(false);
 
   useEffect(() => {
