@@ -1,17 +1,17 @@
 "use client";
 
 import { useState, useEffect } from 'react';
-import { generateLandingSections } from '@/lib/generator';
+import { generateLandingSections, LandingSection } from '@/lib/generator';
 import { LandingSectionComponent } from '@/components/landing-section';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { nichos } from '@/data/nichos';
-import { ArrowRight, Download, Eye } from 'lucide-react';
+import { Download } from 'lucide-react';
 
 export default function PreviewPage() {
   const [selectedNicho, setSelectedNicho] = useState<string>('ecopulse-air');
-  const [sections, setSections] = useState<any[]>([]);
+  const [sections, setSections] = useState<LandingSection[]>([]);
   const [isGenerating, setIsGenerating] = useState(false);
 
   const generatePreview = async () => {
@@ -30,7 +30,19 @@ export default function PreviewPage() {
   };
 
   useEffect(() => {
-    generatePreview();
+    let ignore = false;
+    const loadPreview = async () => {
+      setIsGenerating(true);
+      await new Promise(resolve => setTimeout(resolve, 500));
+      const config = await import('@/../landing.config.json');
+      config.nicho = nichos.find(n => n.id === selectedNicho)!;
+      if (!ignore) {
+        setSections(generateLandingSections());
+        setIsGenerating(false);
+      }
+    };
+    loadPreview();
+    return () => { ignore = true; };
   }, [selectedNicho]);
 
   const exportLanding = () => {

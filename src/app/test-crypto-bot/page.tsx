@@ -12,10 +12,6 @@ export default function TestCryptoBotPage() {
   const [sections, setSections] = useState<LandingSection[]>([]);
   const [isGenerating, setIsGenerating] = useState(false);
 
-  useEffect(() => {
-    generateCryptoBotLanding();
-  }, []);
-
   const generateCryptoBotLanding = async () => {
     setIsGenerating(true);
     
@@ -27,6 +23,13 @@ export default function TestCryptoBotPage() {
     setSections(cryptoSections);
     setIsGenerating(false);
   };
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      generateCryptoBotLanding();
+    }, 0);
+    return () => clearTimeout(timer);
+  }, []);
 
   const exportLanding = () => {
     // Create a simple HTML export of the landing

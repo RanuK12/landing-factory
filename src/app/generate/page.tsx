@@ -2,7 +2,6 @@
 
 import { generateLandingSections } from '@/lib/generator';
 import { LandingSectionComponent } from '@/components/landing-section';
-import { colorSchemes } from '@/data/nichos';
 
 export default function GeneratePage() {
   const sections = generateLandingSections();

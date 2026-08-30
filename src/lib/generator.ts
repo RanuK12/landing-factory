@@ -5,16 +5,46 @@ export interface LandingSection {
   type: 'hero' | 'features' | 'pricing' | 'faq' | 'contact';
   title?: string;
   content?: string;
-  items?: any[];
+  items?: LandingSectionItem[];
   colorScheme?: {
     primary: string;
     accent: string;
   };
 }
 
+export interface LandingSectionItem {
+  name?: string;
+  price?: string;
+  features?: string[];
+  email?: string;
+  phone?: string;
+  whatsApp?: string;
+  [key: string]: unknown;
+}
+
+interface LandingConfig {
+  businessName: string;
+  tagline: string;
+  primaryColor?: string;
+  accentColor?: string;
+  features?: string[];
+  nicho?: {
+    name: string;
+    price: number;
+    features: string[];
+  };
+  faqs?: { question: string; answer: string }[];
+  contact?: {
+    email: string;
+    phone: string;
+    whatsApp: string;
+  };
+  sections?: string[];
+}
+
 export const generateLandingSections = (configPath?: string): LandingSection[] => {
   // Use provided config path or default
-  let config = landingConfig;
+  let config: LandingConfig = landingConfig;
   
   if (configPath) {
     // Try to load a different config based on the path
@@ -23,7 +53,7 @@ export const generateLandingSections = (configPath?: string): LandingSection[] =
       // proper dynamic imports or a config management system
       if (configPath.includes('crypto-bot')) {
         // Import the crypto bot config
-        const cryptoConfig = require('../../crypto-bot-config.json');
+        const cryptoConfig = require('../../crypto-bot-config.json') as LandingConfig;
         config = cryptoConfig;
       }
     } catch (error) {
